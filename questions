@@ -1,0 +1,104 @@
+
+Top priorities before launching:
+1. Decide on domain - this is the main blocker.
+2. Flesh out sign up pages - what info do we want people to enter?
+3. Need CREW email set up (through Google apps?) after determining domain name. We also need a site "Broadcaster" in NationBuilder. BFP has several already but we should have a CREW-specific one. 
+        http://nationbuilder.com/what_is_a_broadcaster
+4. We need to set up a payment processor and adjust Donate page. (Or we can temporarily hide that page if that's a problem.)
+        https://betterfutureproject.nationbuilder.com/admin/merchant_accounts/payflows/new
+        http://nationbuilder.com/j3_gaming/paypal_payflow_pro_bank_account
+5. Logo
+6. Slider images (assuming you like that style)
+7. Caroline needs to be a control panel user in order to be point person
+
+Sort out "sign up" vs. "sign up as an individual volunteer" vs. "apply to start a crew"
+
+Paths
+http://nationbuilder.com/create_paths
+http://nationbuilder.com/default_paths
+
+<div class="span6">
+<label class="checkbox" for="signup_email_opt_in">
+<input name="signup[email_opt_in]" type="hidden" value="0">
+<input class="checkbox user-success" checked="checked" id="signup_email_opt_in" name="signup[email_opt_in]" type="checkbox" value="1">
+Send me email updates
+</label>
+</div>
+
+
+Outstanding items and questions that do not block launch:
+
+http://crew-betterfutureproject.nationbuilder.com/unsubscribe
+http://nationbuilder.com/how_to_use_the_unsubscribe_page
+"The page content will be the same across all websites of a nation."
+
+Need bios for Caroline and Craig for the Our Team page. Titles at minimum. Portait pictures taken in the same style would be great.
+Up to you if you want additional summary blurbs.
+
+Admin accounts
+You two do not necessarily need to adjust the site any time soon - at least it's not a blocker to launch. However one major perk of NationBuilder is that it's quite accessible for you to change content and add features yourselves.
+- Craig already is a Nation Builder admin and can edit the site as desired.
+- Caroline will need to be added by Craig at the appropriate permission level within the BFP nation in order to edit content/blog etc.
+
+NB has many other features we can add semi out-of-the-box. For example a blog, surveys, event calendar, FAQs, petitions, etc. It will make sense to discuss more after cleaning up the basic site.
+
+Do you want social buttons (Like on Facebook, Tweet this, etc.)?
+        I'm curious if BFP has had good results with social links. They create visual clutter but be worth it to help drive traffic.
+
+Add viewable invoices to complement donation page?
+
+Should there be a feedback page? (Could be useful as we don't yet know much about who will engage with the site and their wants/needs.)
+
+Do you want to have a Rules/Code of Conduct page? This would apply more if we have discussion features on the site.
+
+
+
+
+
+Colors
+light green
+Hex #46ac33
+RGB (70,172,51)
+CMYK (59,0,70,33)
+
+dark green
+Hex #078036
+RGB (7,128,54)
+CMYK (95,0,58,50)
+
+light blue
+Hex #5ec7f2
+RGB (94,199,242)
+CMYK (61,18,0,5)
+
+dark blue
+Hex #1e82c3
+RGB (30,130,195)
+CMYK (85,33,0,24)
+
+dark orange
+Hex #e56a33
+RGB (229,106,51)
+CMYK (0,54,78,10)
+
+light orange
+f69f00
+246,159,0
+0,35,100,4
+
+
+http://nationbuilder.com/public_theme_guidelines#aware
+Features:
+
+Responsive theme: Design automatically adjusts and optimizes to fit the size of screen (iPhone/iPad/Desktop ready). If you are creating a new theme, we strongly recommend you clone Aware to serve as the base of your theme.
+Inline sign in flow
+Off canvas nav when viewing the theme on a mobile device
+Customizable icons
+include page excerpts on homepage
+General Guidelines:
+
+To prevent distortion, site logos should be 200px wide by 100px high.
+The images you upload to your Featured Content Sliders should be 1026px wide and a height of 250px is suggested. Make sure all your images are exactly the same dimensions.
+The top navigation will change to an off canvas nav when viewing Aware on a mobile device such as an iPhone or iPad. Tap the icon with three lines to the left of your site name or site logo to activate the menu.
+If a site background image is used, it should be 1366px wide by 768px high or larger.
+Developers can override icons by first cloning Aware, and then editing the _icons.scss file. Icons are displayed via a span class. To change the icon, simply change the properties of those classes.
