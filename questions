@@ -17,14 +17,12 @@ Paths
 http://nationbuilder.com/create_paths
 http://nationbuilder.com/default_paths
 
-<div class="span6">
-<label class="checkbox" for="signup_email_opt_in">
-<input name="signup[email_opt_in]" type="hidden" value="0">
-<input class="checkbox user-success" checked="checked" id="signup_email_opt_in" name="signup[email_opt_in]" type="checkbox" value="1">
-Send me email updates
-</label>
-</div>
-
+http://www.color-hex.com/color/e0d6c8
+http://www.color-hex.com/color/b85812
+http://www.color-hex.com/color/7ba329
+http://www.color-hex.com/color/516e16
+http://www.color-hex.com/color/222222
+http://www.color-hex.com/color/cccccc
 
 Outstanding items and questions that do not block launch:
 
