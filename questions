@@ -8,6 +8,7 @@ payment processor
 
 move to crew nationbuilder
 
+http://nationbuilder.com/public_theme_guidelines
 
 Top priorities before launching:
 1. Decide on domain - this is the main blocker.
@@ -22,20 +23,10 @@ Top priorities before launching:
   Hurricane Harvey images
 7. Caroline needs to be a control panel user in order to be point person
 
-Sort out "sign up" vs. "sign up as an individual volunteer" vs. "apply to start a crew"
 
 Paths
 http://nationbuilder.com/create_paths
 http://nationbuilder.com/default_paths
-
-<div class="span6">
-<label class="checkbox" for="signup_email_opt_in">
-<input name="signup[email_opt_in]" type="hidden" value="0">
-<input class="checkbox user-success" checked="checked" id="signup_email_opt_in" name="signup[email_opt_in]" type="checkbox" value="1">
-Send me email updates
-</label>
-</div>
-
 
 Outstanding items and questions that do not block launch:
 
@@ -98,18 +89,3 @@ f69f00
 0,35,100,4
 
 
-http://nationbuilder.com/public_theme_guidelines#aware
-Features:
-
-Responsive theme: Design automatically adjusts and optimizes to fit the size of screen (iPhone/iPad/Desktop ready). If you are creating a new theme, we strongly recommend you clone Aware to serve as the base of your theme.
-Inline sign in flow
-Off canvas nav when viewing the theme on a mobile device
-Customizable icons
-include page excerpts on homepage
-General Guidelines:
-
-To prevent distortion, site logos should be 200px wide by 100px high.
-The images you upload to your Featured Content Sliders should be 1026px wide and a height of 250px is suggested. Make sure all your images are exactly the same dimensions.
-The top navigation will change to an off canvas nav when viewing Aware on a mobile device such as an iPhone or iPad. Tap the icon with three lines to the left of your site name or site logo to activate the menu.
-If a site background image is used, it should be 1366px wide by 768px high or larger.
-Developers can override icons by first cloning Aware, and then editing the _icons.scss file. Icons are displayed via a span class. To change the icon, simply change the properties of those classes.
