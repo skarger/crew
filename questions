@@ -1,12 +1,12 @@
 make craig and caroline admins
-sign up flow
 drop social sliders, sm links
-google analytics
+sign up flow
 colors
+google analytics
 payment processor
+improve our model diagram
 
 
-move to crew nationbuilder
 
 http://nationbuilder.com/public_theme_guidelines#verve
 
@@ -76,18 +76,17 @@ RGB (7,128,54)
 CMYK (95,0,58,50)
 
 light blue
-Hex #5ec7f2
-RGB (94,199,242)
+Hex #63C8F0
+RGB (99,200,240)
 CMYK (61,18,0,5)
 
 dark blue
-Hex #1e82c3
-RGB (30,130,195)
-CMYK (85,33,0,24)
+Hex #2F87C3
+RGB (47, 135, 195)
 
 dark orange
-Hex #e56a33
-RGB (229,106,51)
+Hex #e36a3c
+RGB (227,106,60)
 CMYK (0,54,78,10)
 
 light orange
