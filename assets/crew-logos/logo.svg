@@ -1,0 +1,31 @@
+<svg version="1.1"
+baseProfile="full"
+width="1380" height="1370"
+xmlns="http://www.w3.org/2000/svg"
+>
+<!--
+viewBox="0 0 4040 4010">
+-->
+
+<g id="orange">
+<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#e36a3c"/>
+
+<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#f69f00"
+transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>  
+</g>
+
+<g id="blue" transform="scale(-1, 1) translate(-1380)">
+<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#63C8F0"/>
+
+<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#2F87C3"
+transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>  
+</g>
+
+<g id="green" transform="translate(24 48) rotate(-120 666 674)">
+<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#147F39"/>
+
+<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#4AAB3B"
+transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>  
+</g>  
+
+</svg>
