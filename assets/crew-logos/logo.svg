@@ -1,31 +1,38 @@
-<svg version="1.1"
-baseProfile="full"
-width="1380" height="1370"
-xmlns="http://www.w3.org/2000/svg"
->
-<!--
-viewBox="0 0 4040 4010">
--->
+<svg version="1.1" baseProfile="full" width="1380" height="1370" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 4040 4010">
 
-<g id="orange">
-<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#e36a3c"/>
+  <g id="logo">
+    <animateTransform attributeName="transform" type="rotate"
+        from="0 690 685" to="30 690 685" dur="0.25s" repeatCount="1" begin="0.5s" fill="freeze"/>
 
-<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#f69f00"
-transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>  
-</g>
+    <animateTransform attributeName="transform" type="rotate"
+        from="30 690 685" to="150 690 685" dur="1s" repeatCount="1" begin="1s" fill="freeze"/>
 
-<g id="blue" transform="scale(-1, 1) translate(-1380)">
-<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#63C8F0"/>
+    <animateTransform attributeName="transform" type="rotate"
+        from="150 690 685" to="270 690 685" dur="1s" repeatCount="1" begin="2.25s" fill="freeze"/>
 
-<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#2F87C3"
-transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>  
-</g>
+    <animateTransform attributeName="transform" type="rotate"
+        from="270 690 685" to="360 690 685" dur="0.75s" repeatCount="1" begin="3.5s" fill="freeze"/>
 
-<g id="green" transform="translate(24 48) rotate(-120 666 674)">
-<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#147F39"/>
+    <g id="orange">
+    <polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#e36a3c"/>
 
-<polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#4AAB3B"
-transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>  
-</g>  
+    <polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#f69f00"
+           transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>
+    </g>
 
+    <g id="blue" transform="scale(-1, 1) translate(-1380)">
+    <polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#63C8F0"/>
+
+    <polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#2F87C3"
+           transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>
+    </g>
+
+    <g id="green" transform="translate(24 48) rotate(-120 666 674)">
+    <polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#147F39"/>
+
+    <polygon points="510 0, 666 0, 666 674, 96 346, 190 186, 510 366" fill="#4AAB3B"
+           transform="scale(1, -1) translate(0, -1348) rotate(-60 666 674)"/>
+    </g>
+
+  </g>
 </svg>
