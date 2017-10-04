@@ -64,7 +64,7 @@ sectionContainer : Model -> Svg Msg
 sectionContainer model =
     g
         [ id "section-content"
-        , transform "translate(1500, 400)"
+        , transform "translate(1500, 446)"
         , width "2760"
         , height "2740"
         ]

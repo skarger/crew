@@ -8841,7 +8841,7 @@ var _user$project$Main$sectionContainer = function (model) {
 			_0: _elm_lang$svg$Svg_Attributes$id('section-content'),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$transform('translate(1500, 400)'),
+				_0: _elm_lang$svg$Svg_Attributes$transform('translate(1500, 446)'),
 				_1: {
 					ctor: '::',
 					_0: _elm_lang$svg$Svg_Attributes$width('2760'),
