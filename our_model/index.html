@@ -8456,137 +8456,300 @@ var _elm_lang$svg$Svg_Attributes$additive = _elm_lang$virtual_dom$VirtualDom$att
 var _elm_lang$svg$Svg_Attributes$accumulate = _elm_lang$virtual_dom$VirtualDom$attribute('accumulate');
 var _elm_lang$svg$Svg_Attributes$accelerate = _elm_lang$virtual_dom$VirtualDom$attribute('accelerate');
 var _elm_lang$svg$Svg_Attributes$accentHeight = _elm_lang$virtual_dom$VirtualDom$attribute('accent-height');
+var _elm_lang$svg$Svg_Events$on = _elm_lang$virtual_dom$VirtualDom$on;
+var _elm_lang$svg$Svg_Events$simpleOn = F2(
+	function (name, msg) {
+		return A2(
+			_elm_lang$svg$Svg_Events$on,
+			name,
+			_elm_lang$core$Json_Decode$succeed(msg));
+	});
+var _elm_lang$svg$Svg_Events$onBegin = _elm_lang$svg$Svg_Events$simpleOn('begin');
+var _elm_lang$svg$Svg_Events$onEnd = _elm_lang$svg$Svg_Events$simpleOn('end');
+var _elm_lang$svg$Svg_Events$onRepeat = _elm_lang$svg$Svg_Events$simpleOn('repeat');
+var _elm_lang$svg$Svg_Events$onAbort = _elm_lang$svg$Svg_Events$simpleOn('abort');
+var _elm_lang$svg$Svg_Events$onError = _elm_lang$svg$Svg_Events$simpleOn('error');
+var _elm_lang$svg$Svg_Events$onResize = _elm_lang$svg$Svg_Events$simpleOn('resize');
+var _elm_lang$svg$Svg_Events$onScroll = _elm_lang$svg$Svg_Events$simpleOn('scroll');
+var _elm_lang$svg$Svg_Events$onLoad = _elm_lang$svg$Svg_Events$simpleOn('load');
+var _elm_lang$svg$Svg_Events$onUnload = _elm_lang$svg$Svg_Events$simpleOn('unload');
+var _elm_lang$svg$Svg_Events$onZoom = _elm_lang$svg$Svg_Events$simpleOn('zoom');
+var _elm_lang$svg$Svg_Events$onActivate = _elm_lang$svg$Svg_Events$simpleOn('activate');
+var _elm_lang$svg$Svg_Events$onClick = _elm_lang$svg$Svg_Events$simpleOn('click');
+var _elm_lang$svg$Svg_Events$onFocusIn = _elm_lang$svg$Svg_Events$simpleOn('focusin');
+var _elm_lang$svg$Svg_Events$onFocusOut = _elm_lang$svg$Svg_Events$simpleOn('focusout');
+var _elm_lang$svg$Svg_Events$onMouseDown = _elm_lang$svg$Svg_Events$simpleOn('mousedown');
+var _elm_lang$svg$Svg_Events$onMouseMove = _elm_lang$svg$Svg_Events$simpleOn('mousemove');
+var _elm_lang$svg$Svg_Events$onMouseOut = _elm_lang$svg$Svg_Events$simpleOn('mouseout');
+var _elm_lang$svg$Svg_Events$onMouseOver = _elm_lang$svg$Svg_Events$simpleOn('mouseover');
+var _elm_lang$svg$Svg_Events$onMouseUp = _elm_lang$svg$Svg_Events$simpleOn('mouseup');
 var _user$project$Main$lightGreen = '#4AAB3B';
 var _user$project$Main$darkGreen = '#147F39';
-var _user$project$Main$greenThird = A2(
-	_elm_lang$svg$Svg$g,
-	{
-		ctor: '::',
-		_0: _elm_lang$svg$Svg_Attributes$id('green'),
-		_1: {
-			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$transform('translate(24 48) rotate(-120 666 674)'),
-			_1: {ctor: '[]'}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$svg$Svg$polygon,
-			{
-				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkGreen),
-					_1: {ctor: '[]'}
-				}
-			},
-			{ctor: '[]'}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$svg$Svg$polygon,
-				{
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightGreen),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
-							_1: {ctor: '[]'}
-						}
-					}
-				},
-				{ctor: '[]'}),
-			_1: {ctor: '[]'}
-		}
-	});
-var _user$project$Main$lightBlue = '#2F87C3';
-var _user$project$Main$darkBlue = '#63C8F0';
-var _user$project$Main$blueThird = A2(
-	_elm_lang$svg$Svg$g,
-	{
-		ctor: '::',
-		_0: _elm_lang$svg$Svg_Attributes$id('blue'),
-		_1: {
-			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$transform('scale(-1, 1) translate(-1380)'),
-			_1: {ctor: '[]'}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$svg$Svg$polygon,
-			{
-				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkBlue),
-					_1: {ctor: '[]'}
-				}
-			},
-			{ctor: '[]'}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$svg$Svg$polygon,
-				{
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightBlue),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
-							_1: {ctor: '[]'}
-						}
-					}
-				},
-				{ctor: '[]'}),
-			_1: {ctor: '[]'}
-		}
-	});
+var _user$project$Main$lightBlue = '#63C8F0';
+var _user$project$Main$darkBlue = '#2F87C3';
 var _user$project$Main$lightOrange = '#f69f00';
 var _user$project$Main$darkOrange = '#e36a3c';
-var _user$project$Main$educationSection = A2(
-	_elm_lang$svg$Svg$foreignObject,
-	{
-		ctor: '::',
-		_0: _elm_lang$svg$Svg_Attributes$width('100%'),
-		_1: {
-			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$height('100%'),
-			_1: {ctor: '[]'}
-		}
-	},
+var _user$project$Main$planningSection = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
 	{
 		ctor: '::',
 		_0: A2(
 			_elm_lang$html$Html$h2,
+			{ctor: '[]'},
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$style(
+				_0: A2(
+					_elm_lang$html$Html$span,
 					{
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'color', _1: _user$project$Main$darkOrange},
-						_1: {
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'color', _1: _user$project$Main$darkGreen},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Planning policies and programs'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'font-weight', _1: 'normal'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(' that:'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$ul,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
 							ctor: '::',
 							_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
 							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$li,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Build long-term climate resilience at the municipal and state levels'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$li,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Strengthen the health and equity of our communities'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$li,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Advance constructive solutions to help society achieve a just transition to a clean energy economy'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
 						}
-					}),
-				_1: {ctor: '[]'}
-			},
+					}
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Main$serviceProjectsSection = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h2,
+			{ctor: '[]'},
 			{
 				ctor: '::',
-				_0: _elm_lang$html$Html$text('Education about:'),
-				_1: {ctor: '[]'}
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'color', _1: _user$project$Main$darkBlue},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Service Projects'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'font-weight', _1: 'normal'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(' that:'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$ul,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$li,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Build local resilience, especially for individuals and communities particularly vulnerable to climate change'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$li,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Collaborate with emergency management agencies and other local partners to respond before, during, and after extreme weather events'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Main$educationSection = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h2,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'color', _1: _user$project$Main$darkOrange},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Education'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'font-weight', _1: 'normal'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(' about:'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
 			}),
 		_1: {
 			ctor: '::',
@@ -8639,36 +8802,187 @@ var _user$project$Main$educationSection = A2(
 			_1: {ctor: '[]'}
 		}
 	});
-var _user$project$Main$sectionContainer = A2(
+var _user$project$Main$sectionContainer = function (model) {
+	return A2(
+		_elm_lang$svg$Svg$g,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$id('section-content'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$transform('translate(1500, 400)'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$width('2760'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$height('2740'),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$svg$Svg$foreignObject,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$width('100%'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$height('100%'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: model.selectedSection,
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Main$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'ShowEducationSection':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{selectedSection: _user$project$Main$educationSection});
+			case 'ShowServiceProjectsSection':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{selectedSection: _user$project$Main$serviceProjectsSection});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{selectedSection: _user$project$Main$planningSection});
+		}
+	});
+var _user$project$Main$model = {
+	selectedSection: A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{ctor: '[]'})
+};
+var _user$project$Main$Model = function (a) {
+	return {selectedSection: a};
+};
+var _user$project$Main$ShowPlanningSection = {ctor: 'ShowPlanningSection'};
+var _user$project$Main$greenThird = A2(
 	_elm_lang$svg$Svg$g,
 	{
 		ctor: '::',
-		_0: _elm_lang$svg$Svg_Attributes$id('section-content'),
+		_0: _elm_lang$svg$Svg_Attributes$id('green'),
 		_1: {
 			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$transform('translate(1500, 400)'),
+			_0: _elm_lang$svg$Svg_Attributes$transform('translate(24 48) rotate(-120 666 674)'),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$width('2760'),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$height('2740'),
-					_1: {ctor: '[]'}
-				}
+				_0: _elm_lang$svg$Svg_Events$onClick(_user$project$Main$ShowPlanningSection),
+				_1: {ctor: '[]'}
 			}
 		}
 	},
 	{
 		ctor: '::',
-		_0: _user$project$Main$educationSection,
-		_1: {ctor: '[]'}
+		_0: A2(
+			_elm_lang$svg$Svg$polygon,
+			{
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkGreen),
+					_1: {ctor: '[]'}
+				}
+			},
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$svg$Svg$polygon,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightGreen),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		}
 	});
+var _user$project$Main$ShowServiceProjectsSection = {ctor: 'ShowServiceProjectsSection'};
+var _user$project$Main$blueThird = A2(
+	_elm_lang$svg$Svg$g,
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg_Attributes$id('blue'),
+		_1: {
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$transform('scale(-1, 1) translate(-1380)'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Events$onClick(_user$project$Main$ShowServiceProjectsSection),
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$svg$Svg$polygon,
+			{
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightBlue),
+					_1: {ctor: '[]'}
+				}
+			},
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$svg$Svg$polygon,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkBlue),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Main$ShowEducationSection = {ctor: 'ShowEducationSection'};
 var _user$project$Main$orangeThird = A2(
 	_elm_lang$svg$Svg$g,
 	{
 		ctor: '::',
 		_0: _elm_lang$svg$Svg_Attributes$id('orange'),
-		_1: {ctor: '[]'}
+		_1: {
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Events$onClick(_user$project$Main$ShowEducationSection),
+			_1: {ctor: '[]'}
+		}
 	},
 	{
 		ctor: '::',
@@ -8725,31 +9039,37 @@ var _user$project$Main$crewLogo = A2(
 			}
 		}
 	});
-var _user$project$Main$ourModelDiagram = A2(
-	_elm_lang$svg$Svg$svg,
-	{
-		ctor: '::',
-		_0: _elm_lang$svg$Svg_Attributes$width('2760'),
-		_1: {
+var _user$project$Main$clickableLogoDiagram = function (model) {
+	return A2(
+		_elm_lang$svg$Svg$svg,
+		{
 			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$height('2740'),
+			_0: _elm_lang$svg$Svg_Attributes$width('2760'),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$viewBox('-100 -100 8048 8020'),
+				_0: _elm_lang$svg$Svg_Attributes$height('2740'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$viewBox('-100 -100 8048 8020'),
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: _user$project$Main$crewLogo,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Main$sectionContainer(model),
 				_1: {ctor: '[]'}
 			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: _user$project$Main$crewLogo,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Main$sectionContainer,
-			_1: {ctor: '[]'}
-		}
-	});
-var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(_user$project$Main$ourModelDiagram);
+		});
+};
+var _user$project$Main$view = function (model) {
+	return _user$project$Main$clickableLogoDiagram(model);
+};
+var _user$project$Main$main = _elm_lang$html$Html$beginnerProgram(
+	{model: _user$project$Main$model, view: _user$project$Main$view, update: _user$project$Main$update})();
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
 if (typeof _user$project$Main$main !== 'undefined') {
