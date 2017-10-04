@@ -3,12 +3,24 @@ sign up flow
 colors
 google analytics
 
-our model diagram
+Group 1
+Point domain name to NB site
+Create custom data fields to support sign up variants
+Implement sign up pages
+Create Our Model diagram
   open text area for description of each of the 6 colors (subjects by caroline)
   can we make each piece of the logo clickable?
+Drop remaining social media links (already removed from most pages)
+Page header (logo and text)
+Adjust colors
+Adjust image sizes
 
-payment processor
-improve our model diagram
+Group 2
+Connect payment processor/bank account for donations
+Additional visual improvements
+  Improve cycle diagram
+Set up analytics
+HTTPS for all pages
 
 
 
