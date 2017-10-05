@@ -9,11 +9,13 @@
         </style>
     </head>
     <body>
+        <script src="what-we-do.js"></script>
         <div id="interactive-logo"></div>
-        <script src="our-model.js"></script>
         <script>
             var node = document.getElementById('interactive-logo');
-            var app = Elm.Main.embed(node);
+            if (node !== null) {
+                var app = Elm.Main.embed(node);
+            }
         </script>
     </body>
 </html>
