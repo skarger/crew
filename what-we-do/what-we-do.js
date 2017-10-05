@@ -9075,25 +9075,38 @@ var _user$project$Main$clickableLogoDiagram = function (model) {
 		_elm_lang$svg$Svg$svg,
 		{
 			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$width('2760'),
+			_0: _elm_lang$html$Html_Attributes$style(
+				{
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'margin-left', _1: 'auto'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'margin-right', _1: 'auto'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'display', _1: 'block'},
+							_1: {ctor: '[]'}
+						}
+					}
+				}),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$height('2740'),
+				_0: _elm_lang$svg$Svg_Attributes$width('330'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$viewBox('-100 -100 8048 8020'),
-					_1: {ctor: '[]'}
+					_0: _elm_lang$svg$Svg_Attributes$height('317'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 1380 1370'),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		},
 		{
 			ctor: '::',
 			_0: _user$project$Main$crewLogo,
-			_1: {
-				ctor: '::',
-				_0: _user$project$Main$sectionContainer(model),
-				_1: {ctor: '[]'}
-			}
+			_1: {ctor: '[]'}
 		});
 };
 var _user$project$Main$view = function (model) {
