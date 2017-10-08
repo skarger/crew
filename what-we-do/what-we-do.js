@@ -9091,13 +9091,13 @@ var _user$project$Main$clickableLogoDiagram = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$width('330'),
+				_0: _elm_lang$svg$Svg_Attributes$width('1380'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$height('317'),
+					_0: _elm_lang$svg$Svg_Attributes$height('1370'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 1380 1370'),
+						_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 4040 4010'),
 						_1: {ctor: '[]'}
 					}
 				}
@@ -9106,7 +9106,11 @@ var _user$project$Main$clickableLogoDiagram = function (model) {
 		{
 			ctor: '::',
 			_0: _user$project$Main$crewLogo,
-			_1: {ctor: '[]'}
+			_1: {
+				ctor: '::',
+				_0: _user$project$Main$sectionContainer(model),
+				_1: {ctor: '[]'}
+			}
 		});
 };
 var _user$project$Main$view = function (model) {

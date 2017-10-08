@@ -50,11 +50,12 @@ clickableLogoDiagram : Model -> Html.Html Msg
 clickableLogoDiagram model =
     svg
         [ Html.Attributes.style [ ( "margin-left", "auto" ), ( "margin-right", "auto" ), ( "display", "block" ) ]
-        , width "330"
-        , height "317"
-        , viewBox "0 0 1380 1370"
+        , width "1380"
+        , height "1370"
+        , viewBox "0 0 4040 4010"
         ]
         [ crewLogo
+        , sectionContainer model
         ]
 
 
