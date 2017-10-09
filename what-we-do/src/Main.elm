@@ -43,25 +43,227 @@ update msg model =
 
 view : Model -> Html.Html Msg
 view model =
-    clickableLogoDiagram model
+    div [ Html.Attributes.style [ ( "margin", "5%" ) ] ]
+        [ div
+            [ Html.Attributes.style [ ( "border-style", "double" ), ( "height", "100%" ), ( "width", "100%" ) ]
+            ]
+            [ clickableLogoDiagram model
+            ]
+        ]
 
 
 clickableLogoDiagram : Model -> Html.Html Msg
 clickableLogoDiagram model =
     svg
-        [ Html.Attributes.style [ ( "margin-left", "auto" ), ( "margin-right", "auto" ), ( "display", "block" ) ]
-        , width "1380"
-        , height "1370"
-        , viewBox "0 0 4040 4010"
+        [ width "100%"
+        , height "100%"
+        , viewBox "0 0 2078 1340"
         ]
-        [ crewLogo
-        , sectionContainer model
+        [ sections
+        , logoRockets
         ]
 
 
-crewLogo : Svg Msg
-crewLogo =
-    g [ id "logo" ] [ orangeThird, blueThird, greenThird ]
+logoRockets : Svg Msg
+logoRockets =
+    g [ id "rockets" ] [ educationRocket, serviceRocket, planningRocket ]
+
+
+sections : Svg Msg
+sections =
+    g [ id "sections" ] [ educationHeader, serviceHeader, planningHeader ]
+
+
+sectionHeader : String -> String -> List (Svg Msg) -> Svg Msg
+sectionHeader sectionId color animations =
+    g [ id sectionId ]
+        (animations
+            ++ [ g [ transform "translate(-2078 0)" ]
+                    [ polygon
+                        [ points "100 495, 100 855, 1978 855, 1978 495"
+                        , fill color
+                        ]
+                        []
+                    ]
+               ]
+        )
+
+
+educationHeader : Svg Msg
+educationHeader =
+    sectionHeader "education" darkOrange educationAnimations
+
+
+serviceHeader : Svg Msg
+serviceHeader =
+    sectionHeader "service" darkBlue serviceAnimations
+
+
+planningHeader : Svg Msg
+planningHeader =
+    sectionHeader "planning" darkGreen planningAnimations
+
+
+headerAnimation : String -> String -> String -> String -> Svg Msg
+headerAnimation from_ to_ dur_ begin_ =
+    animateTransform
+        [ attributeName "transform"
+        , type_ "translate"
+        , from from_
+        , to to_
+        , dur dur_
+        , repeatCount "1"
+        , begin begin_
+        , fill "freeze"
+        ]
+        []
+
+
+educationAnimations : List (Svg Msg)
+educationAnimations =
+    [ headerAnimation "-2078 0" "-2078 0" "0.5" "0s"
+    , headerAnimation "-2078 0" "2078 0" "1s" "0.5s"
+    , headerAnimation "2078 0" "2078 400" "0.5s" "1.5s"
+    , headerAnimation "2078 400" "2078 800" "0.5s" "2.5s"
+    ]
+
+
+serviceAnimations : List (Svg Msg)
+serviceAnimations =
+    [ headerAnimation "-2078 0" "-2078 0" "1.5" "0s"
+    , headerAnimation "-2078 0" "2078 0" "1s" "1.5s"
+    , headerAnimation "2078 0" "2078 400" "0.5s" "2.5s"
+    ]
+
+
+planningAnimations : List (Svg Msg)
+planningAnimations =
+    [ headerAnimation "-2078 0" "-2078 0" "2.5" "0s"
+    , headerAnimation "-2078 0" "2078 0" "1s" "2.5s"
+    ]
+
+
+educationRocket : Svg Msg
+educationRocket =
+    g [ id "educationRocket" ]
+        [ animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "-1412 0"
+            , to "-1412 0"
+            , dur "0.5s"
+            , repeatCount "1"
+            , begin "0s"
+            , fill "freeze"
+            ]
+            []
+        , animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "-1412 0"
+            , to "2744 0"
+            , dur "1s"
+            , repeatCount "1"
+            , begin "0.5s"
+            , fill "freeze"
+            ]
+            []
+        , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
+            [ polygon
+                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
+                , fill darkOrange
+                ]
+                []
+            , polygon
+                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
+                , fill lightOrange
+                , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
+                ]
+                []
+            ]
+        ]
+
+
+serviceRocket : Svg Msg
+serviceRocket =
+    g [ id "serviceRocket" ]
+        [ animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "-1412 0"
+            , to "-1412 0"
+            , dur "1.5s"
+            , repeatCount "1"
+            , begin "0s"
+            , fill "freeze"
+            ]
+            []
+        , animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "-1412 0"
+            , to "2744 0"
+            , dur "1s"
+            , repeatCount "1"
+            , begin "1.5s"
+            , fill "freeze"
+            ]
+            []
+        , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
+            [ polygon
+                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
+                , fill darkBlue
+                ]
+                []
+            , polygon
+                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
+                , fill lightBlue
+                , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
+                ]
+                []
+            ]
+        ]
+
+
+planningRocket : Svg Msg
+planningRocket =
+    g [ id "planningRocket" ]
+        [ animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "-1412 0"
+            , to "-1412 0"
+            , dur "2.5s"
+            , repeatCount "1"
+            , begin "0s"
+            , fill "freeze"
+            ]
+            []
+        , animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "-1412 0"
+            , to "2744 0"
+            , dur "1s"
+            , repeatCount "1"
+            , begin "2.5s"
+            , fill "freeze"
+            ]
+            []
+        , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
+            [ polygon
+                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
+                , fill darkGreen
+                ]
+                []
+            , polygon
+                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
+                , fill lightGreen
+                , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
+                ]
+                []
+            ]
+        ]
 
 
 sectionContainer : Model -> Svg Msg
