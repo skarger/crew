@@ -8727,83 +8727,47 @@ var _user$project$Main$serviceProjectsSection = A2(
 	});
 var _user$project$Main$educationSection = A2(
 	_elm_lang$html$Html$div,
-	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'border',
+					_1: A2(_elm_lang$core$Basics_ops['++'], '2px solid ', _user$project$Main$lightOrange)
+				},
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	},
 	{
 		ctor: '::',
 		_0: A2(
-			_elm_lang$html$Html$h2,
-			{ctor: '[]'},
+			_elm_lang$html$Html$ul,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('what-we-do-list'),
+				_1: {ctor: '[]'}
+			},
 			{
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$span,
+					_elm_lang$html$Html$li,
+					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$style(
-							{
-								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'color', _1: _user$project$Main$darkOrange},
-								_1: {
-									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
-									_1: {ctor: '[]'}
-								}
-							}),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('Education'),
+						_0: _elm_lang$html$Html$text('How residences, businesses, and communities can prepare for projected local climate impacts'),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$span,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$style(
-								{
-									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
-									_1: {
-										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'font-weight', _1: 'normal'},
-										_1: {ctor: '[]'}
-									}
-								}),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text(' about:'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$ul,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$style(
-						{
-							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'font-size', _1: '48px'},
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				},
-				{
 					ctor: '::',
 					_0: A2(
 						_elm_lang$html$Html$li,
 						{ctor: '[]'},
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('How residences, businesses, and communities can prepare for projected local climate impacts'),
+							_0: _elm_lang$html$Html$text('The links between existing social inequalities and vulnerability to climate change'),
 							_1: {ctor: '[]'}
 						}),
 					_1: {
@@ -8813,68 +8777,90 @@ var _user$project$Main$educationSection = A2(
 							{ctor: '[]'},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('The links between existing social inequalities and vulnerability to climate change'),
+								_0: _elm_lang$html$Html$text('Connections between climate pollution, extreme weather events, and larger patterns of climate change'),
 								_1: {ctor: '[]'}
 							}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$li,
-								{ctor: '[]'},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('Connections between climate pollution, extreme weather events, and larger patterns of climate change'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {ctor: '[]'}
-						}
-					}
-				}),
-			_1: {ctor: '[]'}
-		}
-	});
-var _user$project$Main$sectionContainer = function (model) {
-	return A2(
-		_elm_lang$svg$Svg$g,
-		{
-			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$id('section-content'),
-			_1: {
-				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$transform('translate(1500, 446)'),
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$width('2760'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$height('2740'),
 						_1: {ctor: '[]'}
 					}
 				}
-			}
-		},
-		{
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Main$educationSectionContainer = A2(
+	_elm_lang$svg$Svg$g,
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg_Attributes$id('section-content'),
+		_1: {ctor: '[]'}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$svg$Svg$animateTransform,
+			{
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$attributeName('transform'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$type_('translate'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$from('0 0'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$to('0 855'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$dur('1s'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$repeatCount('1'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$begin('3s'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$fill('freeze'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{ctor: '[]'}),
+		_1: {
 			ctor: '::',
 			_0: A2(
 				_elm_lang$svg$Svg$foreignObject,
 				{
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$width('100%'),
+					_0: _elm_lang$svg$Svg_Attributes$x('100'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$height('100%'),
-						_1: {ctor: '[]'}
+						_0: _elm_lang$svg$Svg_Attributes$y('0'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$width('1878'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$height('855'),
+								_1: {ctor: '[]'}
+							}
+						}
 					}
 				},
 				{
 					ctor: '::',
-					_0: model.selectedSection,
+					_0: _user$project$Main$educationSection,
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}
-		});
-};
-var _user$project$Main$planningRocket = A2(
+		}
+	});
+var _user$project$Main$educationRocket = A2(
 	_elm_lang$svg$Svg$g,
 	{
 		ctor: '::',
@@ -8975,7 +8961,7 @@ var _user$project$Main$planningRocket = A2(
 								_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkGreen),
+									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkOrange),
 									_1: {ctor: '[]'}
 								}
 							},
@@ -8989,7 +8975,7 @@ var _user$project$Main$planningRocket = A2(
 									_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightGreen),
+										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightOrange),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
@@ -9136,7 +9122,7 @@ var _user$project$Main$serviceRocket = A2(
 			}
 		}
 	});
-var _user$project$Main$educationRocket = A2(
+var _user$project$Main$planningRocket = A2(
 	_elm_lang$svg$Svg$g,
 	{
 		ctor: '::',
@@ -9237,7 +9223,7 @@ var _user$project$Main$educationRocket = A2(
 								_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkOrange),
+									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkGreen),
 									_1: {ctor: '[]'}
 								}
 							},
@@ -9251,7 +9237,7 @@ var _user$project$Main$educationRocket = A2(
 									_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightOrange),
+										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightGreen),
 										_1: {
 											ctor: '::',
 											_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
@@ -9306,7 +9292,7 @@ var _user$project$Main$headerAnimation = F4(
 			},
 			{ctor: '[]'});
 	});
-var _user$project$Main$educationAnimations = {
+var _user$project$Main$planningAnimations = {
 	ctor: '::',
 	_0: A4(_user$project$Main$headerAnimation, '-2078 0', '-2078 0', '0.5', '0s'),
 	_1: {
@@ -9318,7 +9304,11 @@ var _user$project$Main$educationAnimations = {
 			_1: {
 				ctor: '::',
 				_0: A4(_user$project$Main$headerAnimation, '2078 400', '2078 800', '0.5s', '2.5s'),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: A4(_user$project$Main$headerAnimation, '2078 800', '2078 2000', '1s', '3s'),
+					_1: {ctor: '[]'}
+				}
 			}
 		}
 	}
@@ -9332,11 +9322,15 @@ var _user$project$Main$serviceAnimations = {
 		_1: {
 			ctor: '::',
 			_0: A4(_user$project$Main$headerAnimation, '2078 0', '2078 400', '0.5s', '2.5s'),
-			_1: {ctor: '[]'}
+			_1: {
+				ctor: '::',
+				_0: A4(_user$project$Main$headerAnimation, '2078 400', '2078 1600', '1s', '3s'),
+				_1: {ctor: '[]'}
+			}
 		}
 	}
 };
-var _user$project$Main$planningAnimations = {
+var _user$project$Main$educationAnimations = {
 	ctor: '::',
 	_0: A4(_user$project$Main$headerAnimation, '-2078 0', '-2078 0', '2.5', '0s'),
 	_1: {
@@ -9345,6 +9339,116 @@ var _user$project$Main$planningAnimations = {
 		_1: {ctor: '[]'}
 	}
 };
+var _user$project$Main$educationBorderAnimation = A2(
+	_elm_lang$svg$Svg$animateTransform,
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg_Attributes$attributeName('transform'),
+		_1: {
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$type_('translate'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$from('0 0'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$to('0 855'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$dur('1s'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$repeatCount('1'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$begin('3s'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('freeze'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	{ctor: '[]'});
+var _user$project$Main$educationSectionBorder = A2(
+	_elm_lang$svg$Svg$g,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _user$project$Main$educationBorderAnimation,
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$svg$Svg$rect,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$x('100'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$y('-145'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$width('1878'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$height('1200'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$stroke(_user$project$Main$lightOrange),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$fill('transparent'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Main$educationSectionCover = A2(
+	_elm_lang$svg$Svg$g,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$svg$Svg$rect,
+			{
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$x('99'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$y('-145'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$width('1880'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$height('1001'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$stroke('transparent'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('white'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			},
+			{ctor: '[]'}),
+		_1: {ctor: '[]'}
+	});
 var _user$project$Main$sectionHeader = F3(
 	function (sectionId, color, animations) {
 		return A2(
@@ -9352,7 +9456,11 @@ var _user$project$Main$sectionHeader = F3(
 			{
 				ctor: '::',
 				_0: _elm_lang$svg$Svg_Attributes$id(sectionId),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$class('large'),
+					_1: {ctor: '[]'}
+				}
 			},
 			A2(
 				_elm_lang$core$Basics_ops['++'],
@@ -9397,13 +9505,13 @@ var _user$project$Main$sections = A2(
 	},
 	{
 		ctor: '::',
-		_0: _user$project$Main$educationHeader,
+		_0: _user$project$Main$planningHeader,
 		_1: {
 			ctor: '::',
 			_0: _user$project$Main$serviceHeader,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Main$planningHeader,
+				_0: _user$project$Main$educationHeader,
 				_1: {ctor: '[]'}
 			}
 		}
@@ -9417,18 +9525,59 @@ var _user$project$Main$logoRockets = A2(
 	},
 	{
 		ctor: '::',
-		_0: _user$project$Main$educationRocket,
+		_0: _user$project$Main$planningRocket,
 		_1: {
 			ctor: '::',
 			_0: _user$project$Main$serviceRocket,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Main$planningRocket,
+				_0: _user$project$Main$educationRocket,
 				_1: {ctor: '[]'}
 			}
 		}
 	});
-var _user$project$Main$clickableLogoDiagram = function (model) {
+var _user$project$Main$smallScreen = A2(
+	_elm_lang$svg$Svg$style,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg$text('@media (min-width: 601px) { .small {display: none;}}'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Main$mediumScreen = A2(
+	_elm_lang$svg$Svg$style,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg$text(
+			A2(_elm_lang$core$Basics_ops['++'], '@media (max-width: 600px) { .medium {display: none;}}', ', @media (min-width: 1201px) { .medium {display: none;}}')),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Main$largeScreen = A2(
+	_elm_lang$svg$Svg$style,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg$text('@media (max-width: 1200px) { .large {display: none;}}'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Main$svgDefs = A2(
+	_elm_lang$svg$Svg$defs,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _user$project$Main$largeScreen,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Main$mediumScreen,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Main$smallScreen,
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$Main$whatWeDoAnimation = function (model) {
 	return A2(
 		_elm_lang$svg$Svg$svg,
 		{
@@ -9439,18 +9588,38 @@ var _user$project$Main$clickableLogoDiagram = function (model) {
 				_0: _elm_lang$svg$Svg_Attributes$height('100%'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 2078 1340'),
+					_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 2078 4000'),
 					_1: {ctor: '[]'}
 				}
 			}
 		},
 		{
 			ctor: '::',
-			_0: _user$project$Main$sections,
+			_0: _user$project$Main$largeScreen,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Main$logoRockets,
-				_1: {ctor: '[]'}
+				_0: _user$project$Main$mediumScreen,
+				_1: {
+					ctor: '::',
+					_0: _user$project$Main$smallScreen,
+					_1: {
+						ctor: '::',
+						_0: _user$project$Main$educationSectionContainer,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Main$educationSectionCover,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Main$sections,
+								_1: {
+									ctor: '::',
+									_0: _user$project$Main$logoRockets,
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
 			}
 		});
 };
@@ -9462,7 +9631,7 @@ var _user$project$Main$view = function (model) {
 			_0: _elm_lang$html$Html_Attributes$style(
 				{
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'margin', _1: '5%'},
+					_0: {ctor: '_Tuple2', _0: 'margin', _1: '0%'},
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}
@@ -9491,7 +9660,7 @@ var _user$project$Main$view = function (model) {
 				},
 				{
 					ctor: '::',
-					_0: _user$project$Main$clickableLogoDiagram(model),
+					_0: _user$project$Main$whatWeDoAnimation(model),
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}

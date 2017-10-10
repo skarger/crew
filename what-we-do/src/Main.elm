@@ -43,40 +43,76 @@ update msg model =
 
 view : Model -> Html.Html Msg
 view model =
-    div [ Html.Attributes.style [ ( "margin", "5%" ) ] ]
+    div [ Html.Attributes.style [ ( "margin", "0%" ) ] ]
         [ div
             [ Html.Attributes.style [ ( "border-style", "double" ), ( "height", "100%" ), ( "width", "100%" ) ]
             ]
-            [ clickableLogoDiagram model
+            [ whatWeDoAnimation model
             ]
         ]
 
 
-clickableLogoDiagram : Model -> Html.Html Msg
-clickableLogoDiagram model =
+whatWeDoAnimation : Model -> Html.Html Msg
+whatWeDoAnimation model =
     svg
         [ width "100%"
         , height "100%"
-        , viewBox "0 0 2078 1340"
+        , viewBox "0 0 2078 4000"
         ]
-        [ sections
+        [ largeScreen
+        , mediumScreen
+        , smallScreen
+
+        --educationSectionBorder
+        , educationSectionContainer
+        , educationSectionCover
+        , sections
         , logoRockets
+        ]
+
+
+svgDefs : Svg Msg
+svgDefs =
+    defs [] [ largeScreen, mediumScreen, smallScreen ]
+
+
+largeScreen : Svg Msg
+largeScreen =
+    Svg.style []
+        [ Svg.text "@media (max-width: 1200px) { .large {display: none;}}"
+        ]
+
+
+mediumScreen : Svg Msg
+mediumScreen =
+    Svg.style []
+        [ Svg.text
+            ("@media (max-width: 600px) { .medium {display: none;}}"
+                ++ ", @media (min-width: 1201px) { .medium {display: none;}}"
+            )
+        ]
+
+
+smallScreen : Svg Msg
+smallScreen =
+    Svg.style []
+        [ Svg.text "@media (min-width: 601px) { .small {display: none;}}"
         ]
 
 
 logoRockets : Svg Msg
 logoRockets =
-    g [ id "rockets" ] [ educationRocket, serviceRocket, planningRocket ]
+    g [ id "rockets" ] [ planningRocket, serviceRocket, educationRocket ]
 
 
 sections : Svg Msg
 sections =
-    g [ id "sections" ] [ educationHeader, serviceHeader, planningHeader ]
+    g [ id "sections" ] [ planningHeader, serviceHeader, educationHeader ]
 
 
 sectionHeader : String -> String -> List (Svg Msg) -> Svg Msg
 sectionHeader sectionId color animations =
-    g [ id sectionId ]
+    g [ id sectionId, class "large" ]
         (animations
             ++ [ g [ transform "translate(-2078 0)" ]
                     [ polygon
@@ -87,6 +123,52 @@ sectionHeader sectionId color animations =
                     ]
                ]
         )
+
+
+educationSectionCover : Svg Msg
+educationSectionCover =
+    g []
+        [ rect
+            [ x "99"
+            , y "-145"
+            , width "1880"
+            , height "1001"
+            , stroke "transparent"
+            , fill "white"
+            ]
+            []
+        ]
+
+
+educationSectionBorder : Svg Msg
+educationSectionBorder =
+    g []
+        [ educationBorderAnimation
+        , rect
+            [ x "100"
+            , y "-145"
+            , width "1878"
+            , height "1200"
+            , stroke lightOrange
+            , fill "transparent"
+            ]
+            []
+        ]
+
+
+educationBorderAnimation : Svg Msg
+educationBorderAnimation =
+    animateTransform
+        [ attributeName "transform"
+        , type_ "translate"
+        , from "0 0"
+        , to "0 855"
+        , dur "1s"
+        , repeatCount "1"
+        , begin "3s"
+        , fill "freeze"
+        ]
+        []
 
 
 educationHeader : Svg Msg
@@ -119,12 +201,13 @@ headerAnimation from_ to_ dur_ begin_ =
         []
 
 
-educationAnimations : List (Svg Msg)
-educationAnimations =
+planningAnimations : List (Svg Msg)
+planningAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "0.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "0.5s"
     , headerAnimation "2078 0" "2078 400" "0.5s" "1.5s"
     , headerAnimation "2078 400" "2078 800" "0.5s" "2.5s"
+    , headerAnimation "2078 800" "2078 2000" "1s" "3s"
     ]
 
 
@@ -133,18 +216,19 @@ serviceAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "1.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "1.5s"
     , headerAnimation "2078 0" "2078 400" "0.5s" "2.5s"
+    , headerAnimation "2078 400" "2078 1600" "1s" "3s"
     ]
 
 
-planningAnimations : List (Svg Msg)
-planningAnimations =
+educationAnimations : List (Svg Msg)
+educationAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "2.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "2.5s"
     ]
 
 
-educationRocket : Svg Msg
-educationRocket =
+planningRocket : Svg Msg
+planningRocket =
     g [ id "educationRocket" ]
         [ animateTransform
             [ attributeName "transform"
@@ -171,12 +255,12 @@ educationRocket =
         , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
             [ polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill darkOrange
+                , fill darkGreen
                 ]
                 []
             , polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill lightOrange
+                , fill lightGreen
                 , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
                 ]
                 []
@@ -225,8 +309,8 @@ serviceRocket =
         ]
 
 
-planningRocket : Svg Msg
-planningRocket =
+educationRocket : Svg Msg
+educationRocket =
     g [ id "planningRocket" ]
         [ animateTransform
             [ attributeName "transform"
@@ -253,12 +337,12 @@ planningRocket =
         , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
             [ polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill darkGreen
+                , fill darkOrange
                 ]
                 []
             , polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill lightGreen
+                , fill lightOrange
                 , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
                 ]
                 []
@@ -266,39 +350,31 @@ planningRocket =
         ]
 
 
-sectionContainer : Model -> Svg Msg
-sectionContainer model =
+educationSectionContainer : Svg Msg
+educationSectionContainer =
     g
         [ id "section-content"
-        , transform "translate(1500, 446)"
-        , width "2760"
-        , height "2740"
         ]
-        [ foreignObject [ width "100%", height "100%" ] [ model.selectedSection ] ]
+        [ animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "0 0"
+            , to "0 855"
+            , dur "1s"
+            , repeatCount "1"
+            , begin "3s"
+            , fill "freeze"
+            ]
+            []
+        , foreignObject [ x "100", y "0", width "1878", height "855" ] [ educationSection ]
+        ]
 
 
 educationSection : Html.Html msg
 educationSection =
-    div []
-        [ h2
-            []
-            [ Html.span
-                [ Html.Attributes.style
-                    [ ( "color", darkOrange )
-                    , ( "font-size", "48px" )
-                    ]
-                ]
-                [ Html.text "Education" ]
-            , Html.span
-                [ Html.Attributes.style
-                    [ ( "font-size", "48px" )
-                    , ( "font-weight", "normal" )
-                    ]
-                ]
-                [ Html.text " about:" ]
-            ]
-        , ul
-            [ Html.Attributes.style [ ( "font-size", "48px" ) ]
+    div [ Html.Attributes.style [ ( "border", "2px solid " ++ lightOrange ) ] ]
+        [ ul
+            [ Html.Attributes.class "what-we-do-list"
             ]
             [ li []
                 [ Html.text "How residences, businesses, and communities can prepare for projected local climate impacts"
