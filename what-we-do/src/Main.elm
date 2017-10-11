@@ -59,9 +59,7 @@ whatWeDoAnimation model =
         , height "100%"
         , viewBox "0 0 2078 4000"
         ]
-        [ largeScreen
-        , mediumScreen
-        , smallScreen
+        [ svgDefs
 
         --educationSectionBorder
         , educationSectionContainer
@@ -73,7 +71,29 @@ whatWeDoAnimation model =
 
 svgDefs : Svg Msg
 svgDefs =
-    defs [] [ largeScreen, mediumScreen, smallScreen ]
+    defs [] [ allScreens, largeScreen, mediumScreen, smallScreen ]
+
+
+allScreens : Svg Msg
+allScreens =
+    Svg.style []
+        [ Svg.text
+            (".what-we-do-list {"
+                ++ "font-family: \"Lato\",Helvetica,Arial,sans-serif;"
+                ++ "font-size: 48px ;"
+                ++ "line-height: 72px;"
+                ++ "margin-left: 5%;"
+                ++ "margin-right: 5%;"
+                ++ "color: "
+                ++ textColor
+                ++ "}"
+            )
+        ]
+
+
+textColor : String
+textColor =
+    "#353535"
 
 
 largeScreen : Svg Msg
@@ -87,8 +107,14 @@ mediumScreen : Svg Msg
 mediumScreen =
     Svg.style []
         [ Svg.text
-            ("@media (max-width: 600px) { .medium {display: none;}}"
-                ++ ", @media (min-width: 1201px) { .medium {display: none;}}"
+            ("@media (max-width: 900px) and (min-width: 601px)"
+                ++ "{"
+                ++ " .medium { display: none; }"
+                ++ " .what-we-do-list {"
+                ++ "   font-size: 64px ;"
+                ++ "   line-height: 96px;"
+                ++ " }"
+                ++ "}"
             )
         ]
 
@@ -96,7 +122,16 @@ mediumScreen =
 smallScreen : Svg Msg
 smallScreen =
     Svg.style []
-        [ Svg.text "@media (min-width: 601px) { .small {display: none;}}"
+        [ Svg.text
+            ("@media (max-width: 600px)"
+                ++ "{"
+                ++ " .small { display: none; }"
+                ++ " .what-we-do-list {"
+                ++ "   font-size: 84px ;"
+                ++ "   line-height: 144px;"
+                ++ " }"
+                ++ "}"
+            )
         ]
 
 

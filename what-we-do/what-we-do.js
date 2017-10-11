@@ -9541,7 +9541,26 @@ var _user$project$Main$smallScreen = A2(
 	{ctor: '[]'},
 	{
 		ctor: '::',
-		_0: _elm_lang$svg$Svg$text('@media (min-width: 601px) { .small {display: none;}}'),
+		_0: _elm_lang$svg$Svg$text(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'@media (max-width: 600px)',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'{',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						' .small { display: none; }',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							' .what-we-do-list {',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								'   font-size: 84px ;',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'   line-height: 144px;',
+									A2(_elm_lang$core$Basics_ops['++'], ' }', '}')))))))),
 		_1: {ctor: '[]'}
 	});
 var _user$project$Main$mediumScreen = A2(
@@ -9550,7 +9569,25 @@ var _user$project$Main$mediumScreen = A2(
 	{
 		ctor: '::',
 		_0: _elm_lang$svg$Svg$text(
-			A2(_elm_lang$core$Basics_ops['++'], '@media (max-width: 600px) { .medium {display: none;}}', ', @media (min-width: 1201px) { .medium {display: none;}}')),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'@media (max-width: 900px) and (min-width: 601px)',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'{',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						' .medium { display: none; }',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							' .what-we-do-list {',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								'   font-size: 64px ;',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'   line-height: 96px;',
+									A2(_elm_lang$core$Basics_ops['++'], ' }', '}')))))))),
 		_1: {ctor: '[]'}
 	});
 var _user$project$Main$largeScreen = A2(
@@ -9561,19 +9598,54 @@ var _user$project$Main$largeScreen = A2(
 		_0: _elm_lang$svg$Svg$text('@media (max-width: 1200px) { .large {display: none;}}'),
 		_1: {ctor: '[]'}
 	});
+var _user$project$Main$textColor = '#353535';
+var _user$project$Main$allScreens = A2(
+	_elm_lang$svg$Svg$style,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg$text(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'.what-we-do-list {',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'font-family: \"Lato\",Helvetica,Arial,sans-serif;',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						'font-size: 48px ;',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'line-height: 72px;',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								'margin-left: 5%;',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'margin-right: 5%;',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										'color: ',
+										A2(_elm_lang$core$Basics_ops['++'], _user$project$Main$textColor, '}'))))))))),
+		_1: {ctor: '[]'}
+	});
 var _user$project$Main$svgDefs = A2(
 	_elm_lang$svg$Svg$defs,
 	{ctor: '[]'},
 	{
 		ctor: '::',
-		_0: _user$project$Main$largeScreen,
+		_0: _user$project$Main$allScreens,
 		_1: {
 			ctor: '::',
-			_0: _user$project$Main$mediumScreen,
+			_0: _user$project$Main$largeScreen,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Main$smallScreen,
-				_1: {ctor: '[]'}
+				_0: _user$project$Main$mediumScreen,
+				_1: {
+					ctor: '::',
+					_0: _user$project$Main$smallScreen,
+					_1: {ctor: '[]'}
+				}
 			}
 		}
 	});
@@ -9595,28 +9667,20 @@ var _user$project$Main$whatWeDoAnimation = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$Main$largeScreen,
+			_0: _user$project$Main$svgDefs,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Main$mediumScreen,
+				_0: _user$project$Main$educationSectionContainer,
 				_1: {
 					ctor: '::',
-					_0: _user$project$Main$smallScreen,
+					_0: _user$project$Main$educationSectionCover,
 					_1: {
 						ctor: '::',
-						_0: _user$project$Main$educationSectionContainer,
+						_0: _user$project$Main$sections,
 						_1: {
 							ctor: '::',
-							_0: _user$project$Main$educationSectionCover,
-							_1: {
-								ctor: '::',
-								_0: _user$project$Main$sections,
-								_1: {
-									ctor: '::',
-									_0: _user$project$Main$logoRockets,
-									_1: {ctor: '[]'}
-								}
-							}
+							_0: _user$project$Main$logoRockets,
+							_1: {ctor: '[]'}
 						}
 					}
 				}
