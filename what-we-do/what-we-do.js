@@ -9536,6 +9536,33 @@ var _user$project$Main$logoRockets = A2(
 			}
 		}
 	});
+var _user$project$Main$smallestScreen = A2(
+	_elm_lang$svg$Svg$style,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: _elm_lang$svg$Svg$text(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'@media (max-width: 480px)',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'{',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						' .smallest { display: none; }',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							' .what-we-do-list {',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								'   font-size: 120px ;',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'   line-height: 180px;',
+									A2(_elm_lang$core$Basics_ops['++'], ' }', '}')))))))),
+		_1: {ctor: '[]'}
+	});
 var _user$project$Main$smallScreen = A2(
 	_elm_lang$svg$Svg$style,
 	{ctor: '[]'},
@@ -9544,7 +9571,7 @@ var _user$project$Main$smallScreen = A2(
 		_0: _elm_lang$svg$Svg$text(
 			A2(
 				_elm_lang$core$Basics_ops['++'],
-				'@media (max-width: 600px)',
+				'@media (max-width: 768px)',
 				A2(
 					_elm_lang$core$Basics_ops['++'],
 					'{',
@@ -9556,7 +9583,7 @@ var _user$project$Main$smallScreen = A2(
 							' .what-we-do-list {',
 							A2(
 								_elm_lang$core$Basics_ops['++'],
-								'   font-size: 84px ;',
+								'   font-size: 96px ;',
 								A2(
 									_elm_lang$core$Basics_ops['++'],
 									'   line-height: 144px;',
@@ -9571,7 +9598,7 @@ var _user$project$Main$mediumScreen = A2(
 		_0: _elm_lang$svg$Svg$text(
 			A2(
 				_elm_lang$core$Basics_ops['++'],
-				'@media (max-width: 900px) and (min-width: 601px)',
+				'@media (max-width: 1024px) and (min-width: 768px)',
 				A2(
 					_elm_lang$core$Basics_ops['++'],
 					'{',
@@ -9595,7 +9622,7 @@ var _user$project$Main$largeScreen = A2(
 	{ctor: '[]'},
 	{
 		ctor: '::',
-		_0: _elm_lang$svg$Svg$text('@media (max-width: 1200px) { .large {display: none;}}'),
+		_0: _elm_lang$svg$Svg$text('@media (max-width: 1024x) { .large {display: none;}}'),
 		_1: {ctor: '[]'}
 	});
 var _user$project$Main$textColor = '#353535';
@@ -9644,7 +9671,11 @@ var _user$project$Main$svgDefs = A2(
 				_1: {
 					ctor: '::',
 					_0: _user$project$Main$smallScreen,
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: _user$project$Main$smallestScreen,
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		}

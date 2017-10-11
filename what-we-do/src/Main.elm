@@ -71,7 +71,7 @@ whatWeDoAnimation model =
 
 svgDefs : Svg Msg
 svgDefs =
-    defs [] [ allScreens, largeScreen, mediumScreen, smallScreen ]
+    defs [] [ allScreens, largeScreen, mediumScreen, smallScreen, smallestScreen ]
 
 
 allScreens : Svg Msg
@@ -99,7 +99,7 @@ textColor =
 largeScreen : Svg Msg
 largeScreen =
     Svg.style []
-        [ Svg.text "@media (max-width: 1200px) { .large {display: none;}}"
+        [ Svg.text "@media (max-width: 1024x) { .large {display: none;}}"
         ]
 
 
@@ -107,7 +107,7 @@ mediumScreen : Svg Msg
 mediumScreen =
     Svg.style []
         [ Svg.text
-            ("@media (max-width: 900px) and (min-width: 601px)"
+            ("@media (max-width: 1024px) and (min-width: 768px)"
                 ++ "{"
                 ++ " .medium { display: none; }"
                 ++ " .what-we-do-list {"
@@ -123,12 +123,28 @@ smallScreen : Svg Msg
 smallScreen =
     Svg.style []
         [ Svg.text
-            ("@media (max-width: 600px)"
+            ("@media (max-width: 768px)"
                 ++ "{"
                 ++ " .small { display: none; }"
                 ++ " .what-we-do-list {"
-                ++ "   font-size: 84px ;"
+                ++ "   font-size: 96px ;"
                 ++ "   line-height: 144px;"
+                ++ " }"
+                ++ "}"
+            )
+        ]
+
+
+smallestScreen : Svg Msg
+smallestScreen =
+    Svg.style []
+        [ Svg.text
+            ("@media (max-width: 480px)"
+                ++ "{"
+                ++ " .smallest { display: none; }"
+                ++ " .what-we-do-list {"
+                ++ "   font-size: 120px ;"
+                ++ "   line-height: 180px;"
                 ++ " }"
                 ++ "}"
             )
