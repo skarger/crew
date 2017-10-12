@@ -9776,7 +9776,7 @@ var _user$project$Main$whatWeDoAnimation = function (model) {
 				_0: _elm_lang$svg$Svg_Attributes$height('100%'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 2078 4000'),
+					_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 2078 3510'),
 					_1: {ctor: '[]'}
 				}
 			}
