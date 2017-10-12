@@ -30,25 +30,15 @@ model =
 
 update : Msg -> Model -> Model
 update msg model =
-    case msg of
-        ShowEducationSection ->
-            { model | selectedSection = educationSection }
-
-        ShowServiceProjectsSection ->
-            { model | selectedSection = serviceProjectsSection }
-
-        ShowPlanningSection ->
-            { model | selectedSection = planningSection }
+    model
 
 
 view : Model -> Html.Html Msg
 view model =
-    div [ Html.Attributes.style [ ( "margin", "0%" ) ] ]
-        [ div
-            [ Html.Attributes.style [ ( "border-style", "double" ), ( "height", "100%" ), ( "width", "100%" ) ]
-            ]
-            [ whatWeDoAnimation model
-            ]
+    div
+        [ Html.Attributes.style [ ( "height", "100%" ), ( "width", "100%" ) ]
+        ]
+        [ whatWeDoAnimation model
         ]
 
 
@@ -60,8 +50,10 @@ whatWeDoAnimation model =
         , viewBox "0 0 2078 4000"
         ]
         [ svgDefs
-
-        --educationSectionBorder
+        , planningSectionContainer
+        , planningSectionCover
+        , serviceSectionContainer
+        , serviceSectionCover
         , educationSectionContainer
         , educationSectionCover
         , sections
@@ -167,7 +159,7 @@ sectionHeader sectionId color animations =
         (animations
             ++ [ g [ transform "translate(-2078 0)" ]
                     [ polygon
-                        [ points "100 495, 100 855, 1978 855, 1978 495"
+                        [ points "0 495, 0 855, 2078 855, 2078 495"
                         , fill color
                         ]
                         []
@@ -180,10 +172,10 @@ educationSectionCover : Svg Msg
 educationSectionCover =
     g []
         [ rect
-            [ x "99"
-            , y "-145"
-            , width "1880"
-            , height "1001"
+            [ x "-1"
+            , y "0"
+            , width "2079"
+            , height "854"
             , stroke "transparent"
             , fill "white"
             ]
@@ -191,17 +183,31 @@ educationSectionCover =
         ]
 
 
-educationSectionBorder : Svg Msg
-educationSectionBorder =
+serviceSectionCover : Svg Msg
+serviceSectionCover =
     g []
-        [ educationBorderAnimation
-        , rect
-            [ x "100"
-            , y "-145"
-            , width "1878"
-            , height "1200"
-            , stroke lightOrange
-            , fill "transparent"
+        [ rect
+            [ x "-1"
+            , y "0"
+            , width "2079"
+            , height "1754"
+            , stroke "transparent"
+            , fill "white"
+            ]
+            []
+        ]
+
+
+planningSectionCover : Svg Msg
+planningSectionCover =
+    g []
+        [ rect
+            [ x "-1"
+            , y "0"
+            , width "2079"
+            , height "2654"
+            , stroke "transparent"
+            , fill "white"
             ]
             []
         ]
@@ -257,8 +263,8 @@ planningAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "0.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "0.5s"
     , headerAnimation "2078 0" "2078 400" "0.5s" "1.5s"
-    , headerAnimation "2078 400" "2078 800" "0.5s" "2.5s"
-    , headerAnimation "2078 800" "2078 2000" "1s" "3s"
+    , headerAnimation "2078 400" "2078 900" "0.5s" "2.5s"
+    , headerAnimation "2078 800" "2078 1800" "1s" "3s"
     ]
 
 
@@ -267,7 +273,7 @@ serviceAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "1.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "1.5s"
     , headerAnimation "2078 0" "2078 400" "0.5s" "2.5s"
-    , headerAnimation "2078 400" "2078 1600" "1s" "3s"
+    , headerAnimation "2078 400" "2078 900" "1s" "3s"
     ]
 
 
@@ -284,8 +290,8 @@ planningRocket =
         [ animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "-1412 0"
-            , to "-1412 0"
+            , from "-1312 0"
+            , to "-1312 0"
             , dur "0.5s"
             , repeatCount "1"
             , begin "0s"
@@ -295,8 +301,8 @@ planningRocket =
         , animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "-1412 0"
-            , to "2744 0"
+            , from "-1312 0"
+            , to "2844 0"
             , dur "1s"
             , repeatCount "1"
             , begin "0.5s"
@@ -325,8 +331,8 @@ serviceRocket =
         [ animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "-1412 0"
-            , to "-1412 0"
+            , from "-1312 0"
+            , to "-1312 0"
             , dur "1.5s"
             , repeatCount "1"
             , begin "0s"
@@ -336,8 +342,8 @@ serviceRocket =
         , animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "-1412 0"
-            , to "2744 0"
+            , from "-1312 0"
+            , to "2844 0"
             , dur "1s"
             , repeatCount "1"
             , begin "1.5s"
@@ -366,8 +372,8 @@ educationRocket =
         [ animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "-1412 0"
-            , to "-1412 0"
+            , from "-1312 0"
+            , to "-1312 0"
             , dur "2.5s"
             , repeatCount "1"
             , begin "0s"
@@ -377,8 +383,8 @@ educationRocket =
         , animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "-1412 0"
-            , to "2744 0"
+            , from "-1312 0"
+            , to "2844 0"
             , dur "1s"
             , repeatCount "1"
             , begin "2.5s"
@@ -417,7 +423,47 @@ educationSectionContainer =
             , fill "freeze"
             ]
             []
-        , foreignObject [ x "100", y "0", width "1878", height "855" ] [ educationSection ]
+        , foreignObject [ x "0", y "0", width "2078", height "855" ] [ educationSection ]
+        ]
+
+
+serviceSectionContainer : Svg Msg
+serviceSectionContainer =
+    g
+        [ id "service-section-content"
+        ]
+        [ animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "0 0"
+            , to "0 1755"
+            , dur "1s"
+            , repeatCount "1"
+            , begin "3s"
+            , fill "freeze"
+            ]
+            []
+        , foreignObject [ x "0", y "0", width "2078", height "855" ] [ serviceSection ]
+        ]
+
+
+planningSectionContainer : Svg Msg
+planningSectionContainer =
+    g
+        [ id "planning-section-content"
+        ]
+        [ animateTransform
+            [ attributeName "transform"
+            , type_ "translate"
+            , from "0 0"
+            , to "0 2655"
+            , dur "1s"
+            , repeatCount "1"
+            , begin "3s"
+            , fill "freeze"
+            ]
+            []
+        , foreignObject [ x "0", y "0", width "2078", height "855" ] [ planningSection ]
         ]
 
 
@@ -442,31 +488,15 @@ educationSection =
         ]
 
 
-serviceProjectsSection : Html.Html msg
-serviceProjectsSection =
-    div []
-        [ h2
-            []
-            [ Html.span
-                [ Html.Attributes.style
-                    [ ( "color", darkBlue )
-                    , ( "font-size", "48px" )
-                    ]
-                ]
-                [ Html.text "Service Projects" ]
-            , Html.span
-                [ Html.Attributes.style
-                    [ ( "font-size", "48px" )
-                    , ( "font-weight", "normal" )
-                    ]
-                ]
-                [ Html.text " that:" ]
-            ]
-        , ul
-            [ Html.Attributes.style [ ( "font-size", "48px" ) ]
+serviceSection : Html.Html msg
+serviceSection =
+    div [ Html.Attributes.style [ ( "border", "2px solid " ++ lightBlue ) ] ]
+        [ ul
+            [ Html.Attributes.class "what-we-do-list"
             ]
             [ li []
-                [ Html.text "Build local resilience, especially for individuals and communities particularly vulnerable to climate change"
+                [ Html.text
+                    "Build local resilience, especially for individuals and communities particularly vulnerable to climate change"
                 ]
             , li []
                 [ Html.text
@@ -478,29 +508,13 @@ serviceProjectsSection =
 
 planningSection : Html.Html msg
 planningSection =
-    div []
-        [ h2
-            []
-            [ Html.span
-                [ Html.Attributes.style
-                    [ ( "color", darkGreen )
-                    , ( "font-size", "48px" )
-                    ]
-                ]
-                [ Html.text "Planning policies and programs" ]
-            , Html.span
-                [ Html.Attributes.style
-                    [ ( "font-size", "48px" )
-                    , ( "font-weight", "normal" )
-                    ]
-                ]
-                [ Html.text " that:" ]
-            ]
-        , ul
-            [ Html.Attributes.style [ ( "font-size", "48px" ) ]
+    div [ Html.Attributes.style [ ( "border", "2px solid " ++ lightGreen ) ] ]
+        [ ul
+            [ Html.Attributes.class "what-we-do-list"
             ]
             [ li []
-                [ Html.text "Build long-term climate resilience at the municipal and state levels"
+                [ Html.text
+                    "Build long-term climate resilience at the municipal and state levels"
                 ]
             , li []
                 [ Html.text
