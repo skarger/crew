@@ -47,7 +47,7 @@ whatWeDoAnimation model =
     svg
         [ width "100%"
         , height "100%"
-        , viewBox "0 0 2078 3510"
+        , viewBox "0 0 2078 1940"
         ]
         [ svgDefs
         , planningSectionContainer
@@ -159,7 +159,7 @@ sectionHeader sectionId color animations =
         (animations
             ++ [ g [ transform "translate(-2078 0)" ]
                     [ polygon
-                        [ points "0 495, 0 855, 2078 855, 2078 495"
+                        [ points "0 0, 0 180, 2078 180, 2078 0"
                         , fill color
                         ]
                         []
@@ -173,9 +173,9 @@ educationSectionCover =
     g []
         [ rect
             [ x "-1"
-            , y "0"
+            , y "-120"
             , width "2079"
-            , height "854"
+            , height "300"
             , stroke "transparent"
             , fill "white"
             ]
@@ -190,7 +190,7 @@ serviceSectionCover =
             [ x "-1"
             , y "0"
             , width "2079"
-            , height "1754"
+            , height "790"
             , stroke "transparent"
             , fill "white"
             ]
@@ -205,7 +205,7 @@ planningSectionCover =
             [ x "-1"
             , y "0"
             , width "2079"
-            , height "2654"
+            , height "1540"
             , stroke "transparent"
             , fill "white"
             ]
@@ -262,9 +262,9 @@ planningAnimations : List (Svg Msg)
 planningAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "0.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "0.5s"
-    , headerAnimation "2078 0" "2078 400" "0.5s" "1.5s"
-    , headerAnimation "2078 400" "2078 900" "0.5s" "2.5s"
-    , headerAnimation "2078 800" "2078 1800" "1s" "3s"
+    , headerAnimation "2078 0" "2078 300" "0.5s" "1.5s"
+    , headerAnimation "2078 300" "2078 720" "0.5s" "2.5s"
+    , headerAnimation "2078 720" "2078 1360" "1s" "3s"
     ]
 
 
@@ -272,8 +272,8 @@ serviceAnimations : List (Svg Msg)
 serviceAnimations =
     [ headerAnimation "-2078 0" "-2078 0" "1.5" "0s"
     , headerAnimation "-2078 0" "2078 0" "1s" "1.5s"
-    , headerAnimation "2078 0" "2078 400" "0.5s" "2.5s"
-    , headerAnimation "2078 400" "2078 900" "1s" "3s"
+    , headerAnimation "2078 0" "2078 300" "0.5s" "2.5s"
+    , headerAnimation "2078 300" "2078 720" "1s" "3s"
     ]
 
 
@@ -309,13 +309,8 @@ planningRocket =
             , fill "freeze"
             ]
             []
-        , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
+        , g [ transform "translate(-666 -674) rotate(-30 666 674)" ]
             [ polygon
-                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill darkGreen
-                ]
-                []
-            , polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
                 , fill lightGreen
                 , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
@@ -350,13 +345,8 @@ serviceRocket =
             , fill "freeze"
             ]
             []
-        , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
+        , g [ transform "translate(-666 -674) rotate(-30 666 674)" ]
             [ polygon
-                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill darkBlue
-                ]
-                []
-            , polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
                 , fill lightBlue
                 , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
@@ -391,13 +381,8 @@ educationRocket =
             , fill "freeze"
             ]
             []
-        , g [ transform "translate(-666 0) rotate(-30 666 674)" ]
+        , g [ transform "translate(-666 -674) rotate(-30 666 674)" ]
             [ polygon
-                [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
-                , fill darkOrange
-                ]
-                []
-            , polygon
                 [ points "510 0, 666 0, 666 674, 96 346, 190 186, 510 366"
                 , fill lightOrange
                 , transform "scale(1, -1) translate(0, -1348) rotate(-60 666 674)"
@@ -415,15 +400,15 @@ educationSectionContainer =
         [ animateTransform
             [ attributeName "transform"
             , type_ "translate"
-            , from "0 0"
-            , to "0 855"
+            , from "0 -300"
+            , to "0 480"
             , dur "1s"
             , repeatCount "1"
             , begin "3s"
             , fill "freeze"
             ]
             []
-        , foreignObject [ x "0", y "0", width "2078", height "855" ] [ educationSection ]
+        , foreignObject [ x "0", y "-300", width "2078", height "300" ] [ educationSection ]
         ]
 
 
@@ -436,14 +421,14 @@ serviceSectionContainer =
             [ attributeName "transform"
             , type_ "translate"
             , from "0 0"
-            , to "0 1755"
+            , to "0 1190"
             , dur "1s"
             , repeatCount "1"
             , begin "3s"
             , fill "freeze"
             ]
             []
-        , foreignObject [ x "0", y "0", width "2078", height "855" ] [ serviceSection ]
+        , foreignObject [ x "0", y "-300", width "2078", height "300" ] [ serviceSection ]
         ]
 
 
@@ -456,14 +441,14 @@ planningSectionContainer =
             [ attributeName "transform"
             , type_ "translate"
             , from "0 0"
-            , to "0 2655"
+            , to "0 1840"
             , dur "1s"
             , repeatCount "1"
             , begin "3s"
             , fill "freeze"
             ]
             []
-        , foreignObject [ x "0", y "0", width "2078", height "855" ] [ planningSection ]
+        , foreignObject [ x "0", y "-300", width "2078", height "300" ] [ planningSection ]
         ]
 
 

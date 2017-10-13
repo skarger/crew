@@ -8714,7 +8714,7 @@ var _user$project$Main$planningSectionContainer = A2(
 						_0: _elm_lang$svg$Svg_Attributes$from('0 0'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$to('0 2655'),
+							_0: _elm_lang$svg$Svg_Attributes$to('0 1840'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$svg$Svg_Attributes$dur('1s'),
@@ -8746,13 +8746,13 @@ var _user$project$Main$planningSectionContainer = A2(
 					_0: _elm_lang$svg$Svg_Attributes$x('0'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$y('0'),
+						_0: _elm_lang$svg$Svg_Attributes$y('-300'),
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$svg$Svg_Attributes$width('2078'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$height('855'),
+								_0: _elm_lang$svg$Svg_Attributes$height('300'),
 								_1: {ctor: '[]'}
 							}
 						}
@@ -8788,7 +8788,7 @@ var _user$project$Main$serviceSectionContainer = A2(
 						_0: _elm_lang$svg$Svg_Attributes$from('0 0'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$to('0 1755'),
+							_0: _elm_lang$svg$Svg_Attributes$to('0 1190'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$svg$Svg_Attributes$dur('1s'),
@@ -8820,13 +8820,13 @@ var _user$project$Main$serviceSectionContainer = A2(
 					_0: _elm_lang$svg$Svg_Attributes$x('0'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$y('0'),
+						_0: _elm_lang$svg$Svg_Attributes$y('-300'),
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$svg$Svg_Attributes$width('2078'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$height('855'),
+								_0: _elm_lang$svg$Svg_Attributes$height('300'),
 								_1: {ctor: '[]'}
 							}
 						}
@@ -8859,10 +8859,10 @@ var _user$project$Main$educationSectionContainer = A2(
 					_0: _elm_lang$svg$Svg_Attributes$type_('translate'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$from('0 0'),
+						_0: _elm_lang$svg$Svg_Attributes$from('0 -300'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$to('0 855'),
+							_0: _elm_lang$svg$Svg_Attributes$to('0 480'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$svg$Svg_Attributes$dur('1s'),
@@ -8894,13 +8894,13 @@ var _user$project$Main$educationSectionContainer = A2(
 					_0: _elm_lang$svg$Svg_Attributes$x('0'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$y('0'),
+						_0: _elm_lang$svg$Svg_Attributes$y('-300'),
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$svg$Svg_Attributes$width('2078'),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$height('855'),
+								_0: _elm_lang$svg$Svg_Attributes$height('300'),
 								_1: {ctor: '[]'}
 							}
 						}
@@ -9003,7 +9003,7 @@ var _user$project$Main$educationRocket = A2(
 					_elm_lang$svg$Svg$g,
 					{
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$transform('translate(-666 0) rotate(-30 666 674)'),
+						_0: _elm_lang$svg$Svg_Attributes$transform('translate(-666 -674) rotate(-30 666 674)'),
 						_1: {ctor: '[]'}
 					},
 					{
@@ -9015,31 +9015,16 @@ var _user$project$Main$educationRocket = A2(
 								_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkOrange),
-									_1: {ctor: '[]'}
+									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightOrange),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
+										_1: {ctor: '[]'}
+									}
 								}
 							},
 							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$svg$Svg$polygon,
-								{
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightOrange),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
-											_1: {ctor: '[]'}
-										}
-									}
-								},
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						}
+						_1: {ctor: '[]'}
 					}),
 				_1: {ctor: '[]'}
 			}
@@ -9134,7 +9119,7 @@ var _user$project$Main$serviceRocket = A2(
 					_elm_lang$svg$Svg$g,
 					{
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$transform('translate(-666 0) rotate(-30 666 674)'),
+						_0: _elm_lang$svg$Svg_Attributes$transform('translate(-666 -674) rotate(-30 666 674)'),
 						_1: {ctor: '[]'}
 					},
 					{
@@ -9146,31 +9131,16 @@ var _user$project$Main$serviceRocket = A2(
 								_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkBlue),
-									_1: {ctor: '[]'}
+									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightBlue),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
+										_1: {ctor: '[]'}
+									}
 								}
 							},
 							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$svg$Svg$polygon,
-								{
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightBlue),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
-											_1: {ctor: '[]'}
-										}
-									}
-								},
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						}
+						_1: {ctor: '[]'}
 					}),
 				_1: {ctor: '[]'}
 			}
@@ -9265,7 +9235,7 @@ var _user$project$Main$planningRocket = A2(
 					_elm_lang$svg$Svg$g,
 					{
 						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$transform('translate(-666 0) rotate(-30 666 674)'),
+						_0: _elm_lang$svg$Svg_Attributes$transform('translate(-666 -674) rotate(-30 666 674)'),
 						_1: {ctor: '[]'}
 					},
 					{
@@ -9277,31 +9247,16 @@ var _user$project$Main$planningRocket = A2(
 								_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$darkGreen),
-									_1: {ctor: '[]'}
+									_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightGreen),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
+										_1: {ctor: '[]'}
+									}
 								}
 							},
 							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$svg$Svg$polygon,
-								{
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$points('510 0, 666 0, 666 674, 96 346, 190 186, 510 366'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$fill(_user$project$Main$lightGreen),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$transform('scale(1, -1) translate(0, -1348) rotate(-60 666 674)'),
-											_1: {ctor: '[]'}
-										}
-									}
-								},
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						}
+						_1: {ctor: '[]'}
 					}),
 				_1: {ctor: '[]'}
 			}
@@ -9354,13 +9309,13 @@ var _user$project$Main$planningAnimations = {
 		_0: A4(_user$project$Main$headerAnimation, '-2078 0', '2078 0', '1s', '0.5s'),
 		_1: {
 			ctor: '::',
-			_0: A4(_user$project$Main$headerAnimation, '2078 0', '2078 400', '0.5s', '1.5s'),
+			_0: A4(_user$project$Main$headerAnimation, '2078 0', '2078 300', '0.5s', '1.5s'),
 			_1: {
 				ctor: '::',
-				_0: A4(_user$project$Main$headerAnimation, '2078 400', '2078 900', '0.5s', '2.5s'),
+				_0: A4(_user$project$Main$headerAnimation, '2078 300', '2078 720', '0.5s', '2.5s'),
 				_1: {
 					ctor: '::',
-					_0: A4(_user$project$Main$headerAnimation, '2078 800', '2078 1800', '1s', '3s'),
+					_0: A4(_user$project$Main$headerAnimation, '2078 720', '2078 1360', '1s', '3s'),
 					_1: {ctor: '[]'}
 				}
 			}
@@ -9375,10 +9330,10 @@ var _user$project$Main$serviceAnimations = {
 		_0: A4(_user$project$Main$headerAnimation, '-2078 0', '2078 0', '1s', '1.5s'),
 		_1: {
 			ctor: '::',
-			_0: A4(_user$project$Main$headerAnimation, '2078 0', '2078 400', '0.5s', '2.5s'),
+			_0: A4(_user$project$Main$headerAnimation, '2078 0', '2078 300', '0.5s', '2.5s'),
 			_1: {
 				ctor: '::',
-				_0: A4(_user$project$Main$headerAnimation, '2078 400', '2078 900', '1s', '3s'),
+				_0: A4(_user$project$Main$headerAnimation, '2078 300', '2078 720', '1s', '3s'),
 				_1: {ctor: '[]'}
 			}
 		}
@@ -9447,7 +9402,7 @@ var _user$project$Main$planningSectionCover = A2(
 						_0: _elm_lang$svg$Svg_Attributes$width('2079'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$height('2654'),
+							_0: _elm_lang$svg$Svg_Attributes$height('1540'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$svg$Svg_Attributes$stroke('transparent'),
@@ -9482,7 +9437,7 @@ var _user$project$Main$serviceSectionCover = A2(
 						_0: _elm_lang$svg$Svg_Attributes$width('2079'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$height('1754'),
+							_0: _elm_lang$svg$Svg_Attributes$height('790'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$svg$Svg_Attributes$stroke('transparent'),
@@ -9511,13 +9466,13 @@ var _user$project$Main$educationSectionCover = A2(
 				_0: _elm_lang$svg$Svg_Attributes$x('-1'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$y('0'),
+					_0: _elm_lang$svg$Svg_Attributes$y('-120'),
 					_1: {
 						ctor: '::',
 						_0: _elm_lang$svg$Svg_Attributes$width('2079'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$height('854'),
+							_0: _elm_lang$svg$Svg_Attributes$height('300'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$svg$Svg_Attributes$stroke('transparent'),
@@ -9565,7 +9520,7 @@ var _user$project$Main$sectionHeader = F3(
 								_elm_lang$svg$Svg$polygon,
 								{
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$points('0 495, 0 855, 2078 855, 2078 495'),
+									_0: _elm_lang$svg$Svg_Attributes$points('0 0, 0 180, 2078 180, 2078 0'),
 									_1: {
 										ctor: '::',
 										_0: _elm_lang$svg$Svg_Attributes$fill(color),
@@ -9776,7 +9731,7 @@ var _user$project$Main$whatWeDoAnimation = function (model) {
 				_0: _elm_lang$svg$Svg_Attributes$height('100%'),
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 2078 3510'),
+					_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 2078 1940'),
 					_1: {ctor: '[]'}
 				}
 			}
