@@ -7,6 +7,77 @@
             html,head,body { padding:0; margin:0; }
             body { font-family: calibri, helvetica, arial, sans-serif; }
         </style>
+        <style>
+            .svg-container {
+                width: 100%;
+                position: relative;
+                height: 0;
+                padding-top: 100%;
+            }
+
+            .section-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .header-container {
+                width: 100%;
+                position: relative;
+                height: 0;
+                padding-top: 100%;
+                /* height: 500px; */
+            }
+
+            .header {
+                width: 100%;
+                height: 13.8%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .planning-header {
+                width: 100%;
+                height: 13.8%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .list {
+                position: absolute;
+                top: 13.8%;
+                left: 0;
+                border: #f69f00 solid 2px;
+                border-top: none;
+                width: 100%;
+                overflow-wrap: break-word;
+                box-sizing: border-box;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+        <style>
+            /*
+            @keyframes sunrise {
+	            0% {
+                    left: -100%
+                }
+	            100% {
+                    left: 100%;
+                }
+            }
+            #sun {
+                animation-name: sunrise;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+            */
+        </style>
     </head>
     <body>
         <script src="what-we-do.js"></script>
