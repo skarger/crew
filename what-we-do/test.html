@@ -46,7 +46,7 @@
 
             .list {
                 border: #f69f00 solid 1.5px;
-                width: 100%;
+                width: 200%;
                 overflow-wrap: break-word;
                 box-sizing: border-box;
                 margin-bottom: 1%;
@@ -60,13 +60,33 @@
             }
 
             to {
-                transform: translatex(100vw);
+                transform: translatex(50vw);
             }
         }
 
         .svg-container {
+            animation-timing-function: linear;
             animation-duration: 3.5s;
             animation-name: rocketfly;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes sectionbar {
+            from {
+                transform: translatex(-100vw);
+                width: 100%;
+            }
+
+            to {
+                transform: translatex(0vw);
+                width: 200%;
+            }
+        }
+
+        #education-bar {
+            animation-timing-function: linear;
+            animation-duration: 3.5s;
+            animation-name: sectionbar;
             animation-fill-mode: forwards;
         }
     </style>
