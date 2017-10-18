@@ -2,11 +2,12 @@
 <html>
 <head>
     <style>
-            html,body{
+            html, body {
                 display: flex;
                 flex-flow:column nowrap;
                 height:100vh; /* fix IE11 */
                 min-height:100%; /* fix IE11 */
+                overflow-x: hidden;
             }
 
             .container {
@@ -51,6 +52,24 @@
                 margin-bottom: 1%;
             }
     </style>
+
+    <style>
+        @keyframes rocketfly {
+            from {
+                transform: translatex(-100vw);
+            }
+
+            to {
+                transform: translatex(100vw);
+            }
+        }
+
+        .svg-container {
+            animation-duration: 3.5s;
+            animation-name: rocketfly;
+            animation-fill-mode: forwards;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -71,7 +90,7 @@
         </div>
 
        <div class="svg-container" id="planning-rocket">
-           <img class="logo-what-we-do" src="test-logo.svg" />
+           <img class="logo-what-we-do logo-what-we-do-planning" src="test-logo.svg" />
        </div>
     </div>
 </body>
