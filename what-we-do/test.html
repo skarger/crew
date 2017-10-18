@@ -2,7 +2,13 @@
 <html>
 <head>
     <style>
-        html,body{height:100%;}
+            html,body{
+                display: flex;
+                flex-flow:column nowrap;
+                height:100vh; /* fix IE11 */
+                min-height:100%; /* fix IE11 */
+            }
+
             .container {
                 display: flex;
                 flex-direction: row;
