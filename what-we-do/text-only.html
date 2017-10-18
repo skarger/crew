@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            .container {
+              /*
+                display: flex;
+                flex-direction: row;
+              */
+                height: 20%;
+            }
+
+            .svg-container {
+                width: 50%;
+            }
+
+            img.logo-what-we-do {
+                max-height:155%;
+            }
+
+            .section-container {
+                height: 100%;
+                width: 50%;
+            }
+
+            .header-container {
+                height: 100%;
+                width: 100%;
+            }
+
+            .header {
+                width: 100%;
+                height: 8vh;
+                color: #fff;
+                text-align: center;
+            }
+
+            h3.header-text {
+              padding-top: 0.25em;
+            }
+
+            .list {
+                border: solid 1.5px;
+                width: 200%;
+                overflow-wrap: break-word;
+                box-sizing: border-box;
+                margin-bottom: 1%;
+            }
+
+            ul.what-we-do-items > li {
+              font-size: 24px;
+              line-height: 36px;
+            }
+
+            .education-list {
+              border-color: #f69f00;
+            }
+
+            .service-list {
+              border-color: #63C8F0;
+            }
+
+            .planning-list {
+              border-color: #4AAB3B;
+            }
+    </style>
+
+    <style>
+        #education-bar {
+            width: 200%;
+        }
+
+        #service-bar {
+            width: 200%;
+        }
+
+        #planning-bar {
+            width: 200%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-container">
+            <div class="header-container">
+                <div id="education-bar" class="header" style="background-color: rgb(227, 106, 60);">
+                  <h1 class="header-text">Education about:</h1>
+                </div>
+                <div id="education-list" class="list education-list">
+                    <ul>
+                      <li>How residences, businesses, and communities can prepare for projected local climate impacts</li>
+                      <li>The links between existing social inequalities and vulnerability to climate change</li>
+                        <li>Connections between climate pollution, extreme weather events, and larger patterns of climate change</li>
+                    </ul>
+                </div>
+
+                <div id="service-bar" class="header" style="background-color: rgb(47, 135, 195);">
+                  <h1 class="header-text">Service projects that:</h1>
+                </div>
+                <div id="service-list" class="list service-list">
+                    <ul>
+                        <li>Build local resilience, especially for individuals and communities particularly vulnerable to climate change</li>
+                        <li>Collaborate with emergency management agencies and other local partners to respond before, during, and after extreme weather events</li>
+                    </ul>
+                </div>
+
+                <div id="planning-bar" class="header" style="background-color: #147F39;">
+                  <h1 class="header-text">Planning policies and programs that:</h1>
+                </div>
+                <div id="planning-list" class="list planning-list">
+                    <ul>
+                      <li>Build long-term climate resilience at the municipal and state levels</li>
+                      <li>Strengthen the health and equity of our communities</li>
+                      <li>Advance constructive solutions to help society achieve a just transition to a clean energy economy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
