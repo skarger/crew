@@ -3,10 +3,6 @@
 <head>
     <style>
             .container {
-              /*
-                display: flex;
-                flex-direction: row;
-              */
                 height: 20%;
             }
 
@@ -31,12 +27,13 @@
             .header {
                 width: 100%;
                 height: 8vh;
-                color: #fff;
-                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center; /* because flexbox not centering text in IE11 */
             }
 
-            h3.header-text {
-              padding-top: 0.25em;
+            h1.header-text {
             }
 
             .list {
@@ -53,29 +50,32 @@
             }
 
             .education-list {
-              border-color: #f69f00;
+              border-color: rgb(244, 158, 39);
             }
 
             .service-list {
-              border-color: #63C8F0;
+              border-color: rgb(104, 200, 238);
             }
 
             .planning-list {
-              border-color: #4AAB3B;
+              border-color: rgb(78, 169, 66);
             }
     </style>
 
     <style>
         #education-bar {
+            background-color: rgb(227, 106, 60);
             width: 200%;
         }
 
         #service-bar {
             width: 200%;
+            background-color: rgb(47, 135, 195);
         }
 
         #planning-bar {
             width: 200%;
+            background-color: rgb(28, 128, 61);
         }
     </style>
 </head>
@@ -83,7 +83,7 @@
     <div class="container">
         <div class="section-container">
             <div class="header-container">
-                <div id="education-bar" class="header" style="background-color: rgb(227, 106, 60);">
+                <div id="education-bar" class="header">
                   <h1 class="header-text">Education about:</h1>
                 </div>
                 <div id="education-list" class="list education-list">
@@ -94,7 +94,7 @@
                     </ul>
                 </div>
 
-                <div id="service-bar" class="header" style="background-color: rgb(47, 135, 195);">
+                <div id="service-bar" class="header">
                   <h1 class="header-text">Service projects that:</h1>
                 </div>
                 <div id="service-list" class="list service-list">
@@ -104,7 +104,7 @@
                     </ul>
                 </div>
 
-                <div id="planning-bar" class="header" style="background-color: #147F39;">
+                <div id="planning-bar" class="header">
                   <h1 class="header-text">Planning policies and programs that:</h1>
                 </div>
                 <div id="planning-list" class="list planning-list">
