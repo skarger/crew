@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/TR/SVG/DTD/svg11.dtd">
+<svg viewBox="0 -674 666 674" xmlns="http://www.w3.org/2000/svg">
+    <g transform="scale(1, -1)">
+        <polygon points="510 0, 666 0, 666 674, 510 674, 96 346, 190 186, 510 370" fill="#63C8F0" transform="rotate(-30 666 674)">
+        </polygon>
+    </g>
+</svg>
