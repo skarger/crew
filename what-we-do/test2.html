@@ -13,7 +13,7 @@
 
             .svg-container {
                 height: 20%;
-                width: 50%;
+                width: 100%;
                 position: absolute;
                 z-index: 1;
             }
@@ -23,8 +23,10 @@
             }
 
             .section-container {
+                position: absolute;
+                overflow-x: hidden;
                 height: 100%;
-                width: 50%;
+                width: 100%;
             }
 
             .header-container {
@@ -33,7 +35,7 @@
             }
 
             .header {
-                width: 200%;
+                width: 100%;
                 height: 8vh;
                 display: flex;
                 align-items: center;
@@ -46,7 +48,7 @@
 
             .list {
                 border: solid 1.5px;
-                width: 200%;
+                width: 100%;
                 overflow-wrap: break-word;
                 box-sizing: border-box;
                 /*margin-bottom: 1%; */
@@ -91,7 +93,7 @@
     <style>
         @keyframes rocketfly {
             from {
-                transform: translatex(-50vw);
+                transform: translatex(-90vw);
             }
 
             to {
@@ -120,13 +122,13 @@
 
         @keyframes sectionbar {
             0% {
-                transform: translatex(-100vw);
+                transform: translatex(-190vw);
                 width: 100%;
             }
 
             100% {
                 transform: translatex(0vw);
-                width: 200%;
+                width: 100%;
             }
         }
 
@@ -177,9 +179,9 @@
         }
 
         .list {
-            animation-duration: 1.5s;
+            animation-duration: 1s;
             animation-name: slide-in-list;
-            animation-delay: 4.5s;
+            animation-delay: 4.3s;
             animation-fill-mode: both;
         }
 
@@ -207,8 +209,6 @@
 <body>
     <div class="container">
         <div class="section-container">
-            <div class="header-container">
-
                 <div class="svg-container svg-education" id="planning-rocket">
                     <img class="logo-what-we-do" src="education-rocket.svg" />
                 </div>
@@ -220,6 +220,7 @@
                 <div class="svg-container svg-planning" id="planning-rocket">
                     <img class="logo-what-we-do" src="planning-rocket.svg" />
                 </div>
+            <div class="header-container">
 
                 <div id="education-bar" class="header">
                   <h1 class="header-text">Education about:</h1>
