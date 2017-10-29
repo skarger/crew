@@ -1,0 +1,80 @@
+
+<html>
+    <style>
+            .dark-orange-background {
+                background-color: rgb(227, 106, 60);
+            }
+
+            .dark-green-background {
+                background-color: rgb(28, 128, 61);
+            }
+            h1.header-text {
+                margin: 0;
+                padding: 0.5em;
+                text-align: center;
+            }
+            .list {
+                border: solid 1.5px;
+                width: 100%;
+                overflow-wrap: break-word;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            .planning-list {
+                border-color: rgb(78, 169, 66);
+                border-top-color: rgb(28, 128, 61);
+            }
+            .svg-container {
+                width: 50%;
+                z-index: 2;
+                position: absolute;
+                left: 100%;
+                top: 0;
+            }
+            .container {
+                height: 100%;
+                overflow: hidden;
+            }
+            #planning-bar {
+                position: relative;
+            }
+            @keyframes rocketfly {
+                from {
+                    transform: translatex(-150%);
+                }
+
+                to {
+                    transform: translatex(0%);
+                }
+            }
+
+            #planning-bar {
+                animation-timing-function: linear;
+                animation-duration: 1.5s;
+                animation-name: rocketfly;
+                animation-fill-mode: both;
+            }
+    </style>
+    <body>
+        <div class="container">
+            <div class="section-container">
+                <div id="planning-bar" class="">
+                    <div class="">
+                        <div class="header dark-green-background">
+                            <h1 class="header-text">Planning</h1>
+                        </div>
+                        <div id="planning-list" class="list planning-list">
+                            <ul>
+                                <li>Build long-term climate resilience at the municipal and state levels</li>
+                                <li>Strengthen the health and equity of our communities</li>
+                                <li>Advance constructive solutions to help society achieve a just transition to a clean energy economy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="planning-rocket" class="svg-container svg-planning"><img class="logo-what-we-do" src="planning-rocket.svg" alt="" /></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
