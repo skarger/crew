@@ -1,17 +1,4 @@
-Oct 16
-drop social sliders, sm links
-sign up flow
-colors
-google analytics
-
-Group 1
-Point domain name to NB site
-Create custom data fields to support sign up variants
-Implement sign up pages
-Create Our Model diagram
-  open text area for description of each of the 6 colors (subjects by caroline)
-  can we make each piece of the logo clickable?
-Drop remaining social media links (already removed from most pages)
+Oct 22
 Adjust colors
   Page header (logo and text) Blue C.R.E.W.
   Unify the white background
@@ -19,6 +6,24 @@ Adjust colors
     red: #bf5016
     green: #478c0c
     blue: #1b5ebb
+
+colors
+  background white
+
+google analytics
+
+Oct 16
+X drop social sliders, sm links
+X sign up flow
+
+Group 1
+X Point domain name to NB site
+X Create custom data fields to support sign up variants
+X Implement sign up pages
+X Create Our Model diagram
+  open text area for description of each of the 6 colors (subjects by caroline)
+  can we make each piece of the logo clickable?
+X Drop remaining social media links (already removed from most pages)
 Adjust image sizes
 Responsiveness
 
