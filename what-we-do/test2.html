@@ -1,144 +1,148 @@
-
 <html>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <style>
-            .container {
-                height: 100%;
-                overflow-x: hidden;
+        .container {
+            min-height: 300px;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .section-container {
+            position: relative;
+        }
+
+        .dark-orange-background {
+            background-color: rgb(227, 106, 60);
+        }
+
+        .dark-blue-background {
+            background-color: rgb(47, 135, 195);
+        }
+
+        .dark-green-background {
+            background-color: rgb(28, 128, 61);
+        }
+
+        .header-text {
+            margin: 0;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        .list {
+            border: solid 1.5px;
+            width: 100%;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            animation-duration: 1s;
+            animation-name: slide-in-list;
+            animation-delay: 5s;
+            animation-fill-mode: both;
+        }
+
+        .education-list {
+            border-color: rgb(244, 158, 39);
+            border-top-color: rgb(227, 106, 60);
+        }
+
+        .service-list {
+            border-color: rgb(104, 200, 238);
+            border-top-color: rgb(47, 135, 195);
+        }
+
+        .planning-list {
+            border-color: rgb(78, 169, 66);
+            border-top-color: rgb(28, 128, 61);
+        }
+
+        .svg-container {
+            width: 50%;
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+
+        img.logo-what-we-do {
+            max-width: 300px;
+        }
+
+        .section-education {
+            z-index: 3;
+            animation-duration: 0.5s, 1.5s;
+            animation-delay: 3.5s, 4s;
+            animation-name: hide-header, rocket-fly;
+            animation-fill-mode: both;
+        }
+
+        .section-service {
+            z-index: 2;
+            animation-duration: 0.1s, 0.5s, 1.5s;
+            animation-delay: 5.5s, 1.5s, 2s;
+            animation-name: hide-spacer, hide-header, rocket-fly;
+            animation-fill-mode: both;
+        }
+
+        .section-planning {
+            z-index: 1;
+            animation-duration: 0.1s, 1.5s;
+            animation-delay: 5.5s, 0.01s; /* small delay prevents stall on safari */
+            animation-timing-function: linear;
+            animation-name: hide-spacer, rocket-fly;
+            animation-fill-mode: both;
+        }
+
+        @keyframes rocket-fly {
+            from {
+                transform: translatex(-150%);
             }
 
-            .section-container {
-                position: relative;
+            to {
+                transform: translatex(0%);
+            }
+        }
+
+        @keyframes slide-in-list {
+            0% {
+                max-height: 0px;
+                border: 0px;
             }
 
-            .dark-orange-background {
-                background-color: rgb(227, 106, 60);
+            66% {
+                max-height: 0px;
+                border: 1.5px;
             }
 
-            .dark-blue-background {
-                background-color: rgb(47, 135, 195);
+            100% {
+                max-height: 2000px;
+            }
+        }
+
+        @keyframes hide-header {
+            0% {
+                max-height: 0;
             }
 
-            .dark-green-background {
-                background-color: rgb(28, 128, 61);
+            66% {
+                max-height: 0;
             }
 
-            .header-text {
-                margin: 0;
-                padding: 0.5em;
-                text-align: center;
+            100% {
+                max-height: 100%;
+            }
+        }
+
+        @keyframes hide-spacer {
+            0% {
+                margin-top: 0px;
             }
 
-            .list {
-                border: solid 1.5px;
-                width: 100%;
-                overflow-wrap: break-word;
-                box-sizing: border-box;
-                overflow: hidden;
-
-                animation-duration: 1s;
-                animation-name: slide-in-list;
-                animation-delay: 5s;
-                animation-fill-mode: both;
+            100% {
+                margin-top: 10px;
             }
-
-            .education-list {
-                border-color: rgb(244, 158, 39);
-                border-top-color: rgb(227, 106, 60);
-            }
-
-            .service-list {
-                border-color: rgb(104, 200, 238);
-                border-top-color: rgb(47, 135, 195);
-            }
-
-            .planning-list {
-                border-color: rgb(78, 169, 66);
-                border-top-color: rgb(28, 128, 61);
-            }
-
-            .svg-container {
-                width: 50%;
-                z-index: 2;
-                position: absolute;
-                left: 100%;
-                top: 0;
-            }
-
-            img.logo-what-we-do {
-                max-width: 300px;
-            }
-
-            .section-education {
-                animation-duration: 0.5s, 1.5s;
-                animation-delay: 3.5s, 4s;
-                animation-name: hide-header, rocket-fly;
-                animation-fill-mode: both;
-            }
-
-            .section-service {
-                animation-duration: 0.1s, 0.5s, 1.5s;
-                animation-delay: 5.5s, 1.5s, 2s;
-                animation-name: hide-spacer, hide-header, rocket-fly;
-                animation-fill-mode: both;
-            }
-
-            .section-planning {
-                animation-duration: 0.1s, 1.5s;
-                animation-delay: 5.5s, 0.01s; /* small delay prevents stall on safari */
-                animation-timing-function: linear;
-                animation-name: hide-spacer, rocket-fly;
-                animation-fill-mode: both;
-            }
-
-            @keyframes rocket-fly {
-                from {
-                    transform: translatex(-150%);
-                }
-
-                to {
-                    transform: translatex(0%);
-                }
-            }
-
-            @keyframes slide-in-list {
-                0% {
-                    max-height: 0px;
-                    border: 0px;
-                }
-
-                66% {
-                    max-height: 0px;
-                    border: 1.5px;
-                }
-
-                100% {
-                    max-height: 2000px;
-                }
-            }
-
-            @keyframes hide-header {
-                0% {
-                    max-height: 0;
-                }
-
-                66% {
-                    max-height: 0;
-                }
-
-                100% {
-                    max-height: 100%;
-                }
-            }
-
-            @keyframes hide-spacer {
-                0% {
-                    margin-top: 0px;
-                }
-
-                100% {
-                    margin-top: 10px;
-                }
-            }
+        }
     </style>
     <body>
         <div class="container">
