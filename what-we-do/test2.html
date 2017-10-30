@@ -12,16 +12,16 @@
                 animation-fill-mode: both;
             }
             .section-service {
-                animation-duration: 0.5s, 1.5s;
-                animation-delay: 1.5s, 2s;
-                animation-name: hide-header, rocketfly;
+                animation-duration: 0.1s, 0.5s, 1.5s;
+                animation-delay: 5.5s, 1.5s, 2s;
+                animation-name: hide-spacer, hide-header, rocketfly;
                 animation-fill-mode: both;
             }
             .section-planning {
-                animation-delay: 0.01s; /* small delay prevents stall on safari */
+                animation-duration: 0.1s, 1.5s;
+                animation-delay: 5.5s, 0.01s; /* small delay prevents stall on safari */
                 animation-timing-function: linear;
-                animation-duration: 1.5s;
-                animation-name: rocketfly;
+                animation-name: hide-spacer, rocketfly;
                 animation-fill-mode: both;
             }
 
@@ -117,6 +117,16 @@
 
                 100% {
                     max-height: 20%;
+                }
+            }
+
+            @keyframes hide-spacer {
+                0% {
+                    margin-top: 0px;
+                }
+
+                100% {
+                    margin-top: 10px;
                 }
             }
     </style>
