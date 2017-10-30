@@ -1,5 +1,6 @@
 <html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <style>
         .container {
             min-height: 300px;
@@ -26,7 +27,7 @@
 
         .header-text {
             margin: 0;
-            padding: 0.5em;
+            padding: 0.3em;
             text-align: center;
         }
 
@@ -39,7 +40,7 @@
 
             animation-duration: 1s;
             animation-name: slide-in-list;
-            animation-delay: 5s;
+            animation-delay: 6s;
             animation-fill-mode: both;
         }
 
@@ -72,27 +73,29 @@
 
         .section-education {
             z-index: 3;
-            animation-duration: 0.5s, 1.5s;
-            animation-delay: 3.5s, 4s;
-            animation-name: hide-header, rocket-fly;
+            animation-timing-function: linear;
             animation-fill-mode: both;
+            animation-name: hide-header, rocket-fly;
+            animation-duration: 0.5s, 1.7s;
+            animation-delay: 3.9s, 4.4s;
         }
 
         .section-service {
             z-index: 2;
-            animation-duration: 0.1s, 0.5s, 1.5s;
-            animation-delay: 5.5s, 1.5s, 2s;
-            animation-name: hide-spacer, hide-header, rocket-fly;
+            animation-timing-function: linear;
             animation-fill-mode: both;
+            animation-name: hide-spacer, hide-header, rocket-fly;
+            animation-duration: 0.1s, 0.5s, 1.7s;
+            animation-delay: 6.2s, 1.7s, 2.2s;
         }
 
         .section-planning {
             z-index: 1;
-            animation-duration: 0.1s, 1.5s;
-            animation-delay: 5.5s, 0.01s; /* small delay prevents stall on safari */
             animation-timing-function: linear;
-            animation-name: hide-spacer, rocket-fly;
             animation-fill-mode: both;
+            animation-name: hide-spacer, rocket-fly;
+            animation-duration: 0.1s, 1.7s;
+            animation-delay: 6.2s, 0.1s; /* small delay prevents stall on safari */
         }
 
         @keyframes rocket-fly {
