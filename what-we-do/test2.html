@@ -1,28 +1,13 @@
 
 <html>
     <style>
+            .container {
+                height: 100%;
+                overflow-x: hidden;
+            }
+
             .section-container {
                 position: relative;
-
-            }
-            .section-education {
-                animation-duration: 0.5s, 1.5s;
-                animation-delay: 3.5s, 4s;
-                animation-name: hide-header, rocketfly;
-                animation-fill-mode: both;
-            }
-            .section-service {
-                animation-duration: 0.1s, 0.5s, 1.5s;
-                animation-delay: 5.5s, 1.5s, 2s;
-                animation-name: hide-spacer, hide-header, rocketfly;
-                animation-fill-mode: both;
-            }
-            .section-planning {
-                animation-duration: 0.1s, 1.5s;
-                animation-delay: 5.5s, 0.01s; /* small delay prevents stall on safari */
-                animation-timing-function: linear;
-                animation-name: hide-spacer, rocketfly;
-                animation-fill-mode: both;
             }
 
             .dark-orange-background {
@@ -36,11 +21,13 @@
             .dark-green-background {
                 background-color: rgb(28, 128, 61);
             }
-            h1.header-text {
+
+            .header-text {
                 margin: 0;
                 padding: 0.5em;
                 text-align: center;
             }
+
             .list {
                 border: solid 1.5px;
                 width: 100%;
@@ -53,18 +40,22 @@
                 animation-delay: 5s;
                 animation-fill-mode: both;
             }
+
             .education-list {
                 border-color: rgb(244, 158, 39);
                 border-top-color: rgb(227, 106, 60);
             }
+
             .service-list {
                 border-color: rgb(104, 200, 238);
                 border-top-color: rgb(47, 135, 195);
             }
+
             .planning-list {
                 border-color: rgb(78, 169, 66);
                 border-top-color: rgb(28, 128, 61);
             }
+
             .svg-container {
                 width: 50%;
                 z-index: 2;
@@ -72,15 +63,34 @@
                 left: 100%;
                 top: 0;
             }
+
             img.logo-what-we-do {
                 max-width: 300px;
             }
-            .container {
-                height: 100%;
-                overflow-x: hidden;
+
+            .section-education {
+                animation-duration: 0.5s, 1.5s;
+                animation-delay: 3.5s, 4s;
+                animation-name: hide-header, rocket-fly;
+                animation-fill-mode: both;
             }
 
-            @keyframes rocketfly {
+            .section-service {
+                animation-duration: 0.1s, 0.5s, 1.5s;
+                animation-delay: 5.5s, 1.5s, 2s;
+                animation-name: hide-spacer, hide-header, rocket-fly;
+                animation-fill-mode: both;
+            }
+
+            .section-planning {
+                animation-duration: 0.1s, 1.5s;
+                animation-delay: 5.5s, 0.01s; /* small delay prevents stall on safari */
+                animation-timing-function: linear;
+                animation-name: hide-spacer, rocket-fly;
+                animation-fill-mode: both;
+            }
+
+            @keyframes rocket-fly {
                 from {
                     transform: translatex(-150%);
                 }
