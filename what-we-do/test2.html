@@ -4,16 +4,25 @@
             .section-container {
                 position: relative;
 
-                animation-timing-function: linear;
-                animation-duration: 1.5s;
-                animation-name: rocketfly;
+            }
+            .section-education {
+                animation-duration: 0.5s, 1.5s;
+                animation-delay: 3.5s, 4s;
+                animation-name: hide-header, rocketfly;
+                animation-fill-mode: both;
+            }
+            .section-service {
+                animation-duration: 0.5s, 1.5s;
+                animation-delay: 1.5s, 2s;
+                animation-name: hide-header, rocketfly;
                 animation-fill-mode: both;
             }
             .section-planning {
                 animation-delay: 0.01s; /* small delay prevents stall on safari */
-            }
-            .section-service {
-                animation-delay: 1.5s;
+                animation-timing-function: linear;
+                animation-duration: 1.5s;
+                animation-name: rocketfly;
+                animation-fill-mode: both;
             }
 
             .dark-orange-background {
@@ -41,7 +50,7 @@
 
                 animation-duration: 1s;
                 animation-name: slide-in-list;
-                animation-delay: 4.3s;
+                animation-delay: 5s;
                 animation-fill-mode: both;
             }
             .education-list {
@@ -70,6 +79,7 @@
                 height: 100%;
                 overflow: hidden;
             }
+
             @keyframes rocketfly {
                 from {
                     transform: translatex(-150%);
@@ -79,6 +89,7 @@
                     transform: translatex(0%);
                 }
             }
+
             @keyframes slide-in-list {
                 0% {
                     max-height: 0px;
@@ -94,21 +105,63 @@
                     max-height: 2000px;
                 }
             }
+
+            @keyframes hide-header {
+                0% {
+                    max-height: 0;
+                }
+
+                66% {
+                    max-height: 0;
+                }
+
+                100% {
+                    max-height: 20%;
+                }
+            }
     </style>
     <body>
         <div class="container">
+            <div class="section-container section-education">
+                <div class="header dark-orange-background">
+                    <h1 class="header-text">Education</h1>
+                </div>
+                <div class="list education-list">
+                    <ul>
+                        <li>How residences, businesses, and communities can prepare for projected local climate impacts</li>
+                        <li>The links between existing social inequalities and vulnerability to climate change</li>
+                        <li>Connections between climate pollution, extreme weather events, and larger patterns of climate change</li>
+                    </ul>
+                </div>
+
+                <div id="education-rocket" class="svg-container svg-education"><img class="logo-what-we-do" src="education-rocket.svg" alt="" /></div>
+            </div>
+
+            <div class="section-container section-service">
+                <div class="header dark-blue-background">
+                    <h1 class="header-text">Service</h1>
+                </div>
+                <div class="list service-list">
+                    <ul>
+                        <li>Build local resilience, especially for individuals and communities particularly vulnerable to climate change</li>
+                        <li>Collaborate with emergency management agencies and other local partners to respond before, during, and after extreme weather events</li>
+                    </ul>
+                </div>
+
+                <div id="service-rocket" class="svg-container svg-service"><img class="logo-what-we-do" src="service-rocket.svg" alt="" /></div>
+            </div>
+
+
             <div class="section-container section-planning">
-                <div class="">
-                    <div class="header dark-green-background">
-                        <h1 class="header-text">Planning</h1>
-                    </div>
-                    <div id="planning-list" class="list planning-list">
-                        <ul>
-                            <li>Build long-term climate resilience at the municipal and state levels</li>
-                            <li>Strengthen the health and equity of our communities</li>
-                            <li>Advance constructive solutions to help society achieve a just transition to a clean energy economy</li>
-                        </ul>
-                    </div>
+                <div class="header dark-green-background">
+                    <h1 class="header-text">Planning</h1>
+                </div>
+                <div class="list planning-list">
+                    <ul>
+                        <li>Build long-term climate resilience at the municipal and state levels</li>
+                        <li>Strengthen the health and equity of our communities</li>
+                        <li>Advance constructive solutions to help society achieve a just transition to a clean energy economy</li>
+                    </ul>
                 </div>
 
                 <div id="planning-rocket" class="svg-container svg-planning"><img class="logo-what-we-do" src="planning-rocket.svg" alt="" /></div>
