@@ -5,8 +5,7 @@
         .container {
             min-height: 300px;
             height: 100%;
-            overflow-x: hidden;
-            overflow-y: hidden;
+            overflow: hidden;
         }
 
         .section-container {
@@ -73,32 +72,29 @@
 
         .section-education {
             z-index: 3;
-            animation-timing-function: linear;
             animation-fill-mode: both;
-            animation-name: hide-header, rocket-fly;
+            animation-name: hide-header, arrow-fly;
             animation-duration: 0.5s, 1.7s;
-            animation-delay: 3.9s, 4.4s;
+            animation-delay: 4s, 4.4s;
         }
 
         .section-service {
             z-index: 2;
-            animation-timing-function: linear;
             animation-fill-mode: both;
-            animation-name: hide-spacer, hide-header, rocket-fly;
-            animation-duration: 0.1s, 0.5s, 1.7s;
-            animation-delay: 6.2s, 1.7s, 2.2s;
+            animation-name: hide-header, arrow-fly;
+            animation-duration: 0.5s, 1.7s;
+            animation-delay: 1.8s, 2.2s;
         }
 
         .section-planning {
             z-index: 1;
-            animation-timing-function: linear;
             animation-fill-mode: both;
-            animation-name: hide-spacer, rocket-fly;
-            animation-duration: 0.1s, 1.7s;
-            animation-delay: 6.2s, 0.1s; /* small delay prevents stall on safari */
+            animation-name: arrow-fly;
+            animation-duration: 1.7s;
+            animation-delay: 0.1s; /* small delay prevents stall on safari */
         }
 
-        @keyframes rocket-fly {
+        @keyframes arrow-fly {
             from {
                 transform: translatex(-200%);
             }
@@ -127,24 +123,17 @@
         @keyframes hide-header {
             0% {
                 max-height: 0;
+                margin-bottom: 0px;
             }
 
             66% {
                 max-height: 0;
+                margin-bottom: 0px;
             }
 
             100% {
                 max-height: 100%;
-            }
-        }
-
-        @keyframes hide-spacer {
-            0% {
-                margin-top: 0px;
-            }
-
-            100% {
-                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     </style>
