@@ -1,0 +1,20 @@
+crew.nationbuilder.com
+
+Need admin login
+
+Custom theme cloned from on NB's built-in Verve them, as it existed in Fall 2017
+
+* Removes a bunch of social links
+* Removes the "Powered by people like you" box at the bottom 
+* Removes other clutter
+* Adjusts the logo and nav bar sizing to accommodate lengthy org name
+
+
+Logo
+* Designed by Kalman
+* SVG version created by Steve, used as site logo
+
+What We Do page
+
+* Arrows fly in from left with Planning, Service, Education. Section paragraphs fan out.
+* Built with CSS animations with SVG images. See page template.
